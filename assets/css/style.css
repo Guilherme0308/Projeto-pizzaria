@@ -1,0 +1,130 @@
+@import url(/assets/css/reset.css);
+
+body {
+    background-color: rgb(252, 211, 160);
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #eb0000;
+    color: white;
+}
+
+header .logo {
+    width: 100px;
+    padding: 6px;
+    margin-right: 12px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}.home-banner {
+    position: relative;
+
+}
+.home-banner .banner {
+    width: 100%;
+    height: auto;
+}
+.home-banner .logo-banner {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    text-decoration: underline;
+    color: #fff;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.banner-button {
+    z-index: 2;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 16px 32px;
+    background-color: #ff4500;
+    border: 2px solid #eb0000;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.banner-button:hover {
+    background-color: #ff6347;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* cards pizza */
+.pizzas{
+    display: flex;
+    justify-content: space-around;
+}
+.pizza-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 16px;
+}
+
+.pizza-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.pizza-info {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.pizza-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+.pizza-info p {
+    margin: 4px 0;
+}
+
+.order-button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.order-button:hover {
+    background-color: #ff4500;
+}
