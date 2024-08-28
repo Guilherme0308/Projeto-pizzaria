@@ -1,58 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" href="/assets/img/f1.icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fredoka One">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xero Pizzaria</title>
+    <title>Xero-pizzaria</title>
 </head>
+
 <body>
     <header>
-        <img src="/src/img/logo_pizzaria.png" alt="" class="logo">
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/cardapio.html">Cardápio</a></li>
-            <li><a href="/fazer_pedido.html">Fazer Pedido</a></li>
-            <li><a href="">Contatos</a></li>
-            <li><a href="">Sobre    </a></li>
-        </ul>
+        <img src="/assets/img/logo.png" alt="Logo da Pizzaria" class="logo">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/cardapio.html">Cardápio</a></li>
+                <li><a href="#">Pedidos</a></li>
+                <li><a href="#">Fale Conosco</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="shopping-bag">
+                <img src="/assets/img/bolsa-de-compras.png" alt="Bolsa de Compras">
+                <span class="item-count">0</span>
+            </div>
+            <input type="search" name="pesq" id="search" placeholder="Pesquisar..." class="search-bar">
+            <img src="/assets/img/foto.jpg" alt="Foto do Usuário" class="photo-user">
+        </div>
     </header>
-    <section class="home-banner">
-        <img src="/src/img/pizza-5107039_640.jpg" alt="Delicious pizza" class="banner">
-        <img src="/src/img/logo_pizzaria.png" alt="Pizzeria logo" class="logo-banner">
-        <button type="submit" class="banner-button">Fazer Pedido</button>
-    </section>
     
+
+    </header>
+    <div class="home-banner">
+        <img src="/assets/img/home-banner1.jpg" alt="" class="img-banner">
+        <img src="/assets/img/logo.png" alt="" class="logo-banner">
+    </div>
+
     <main>
-        <section class="pizzas">
-            <div class="pizza-card">
-                <img src="/src/img/pizza-5501065_640.jpg    " alt="Pizza Margherita" class="pizza-image">
-                <div class="pizza-info">
-                    <h2>Pizza Margherita</h2>
-                    <p>Ingredientes: Molho de tomate, mussarela, manjericão fresco, azeite de oliva.</p>
-                    <p>Preço: R$ 35,00</p>
-                    <button class="order-button">Fazer Pedido</button>
+        <section class="card-home">
+            <div class="card">
+                <img src="/assets/img/pizza-calabresa.jpg" alt="Pizza de Calabresa" class="img-card">
+                <h1>Pizza de Calabresa</h1>
+                <div class="card-content">
+                    <h2>R$ 55,00</h2>
+                    <button type="submit" class="card-button">Realizar Pedido</button>
+                    <button type="submit" class="card-button">Adicionar a Sacola</button>
                 </div>
             </div>
-            <div class="pizza-card">
-                <img src="/src/img/pizza-5107039_640.jpg   " alt="Pizza Margherita" class="pizza-image">
-                <div class="pizza-info">
-                    <h2>Pizza Portuguesa</h2>
-                    <p>Ingredientes: Molho de tomate, mussarela, manjericão fresco, azeite de oliva.</p>
-                    <p>Preço: R$ 64,00</p>
-                    <button class="order-button">Fazer Pedido</button>
+            <div class="card">
+                <img src="/assets/img/pizza-marguerita.jpg" alt="Pizza Marguerita" class="img-card">
+                <h1>Pizza Marguerita</h1>
+                <div class="card-content">
+                    <h2>R$ 50,00</h2>
+                    <button type="submit" class="card-button">Realizar Pedido</button>
+                    <button type="submit" class="card-button">Adicionar a Sacola</button>
                 </div>
             </div>
-            <div class="pizza-card">
-                <img src="/src/img/pizza-5405848_640.jpg " alt="Pizza Margherita" class="pizza-image">
-                <div class="pizza-info">
-                    <h2>Pizza Portuguesa</h2>
-                    <p>Ingredientes: Molho de tomate, mussarela, manjericão fresco, azeite de oliva.</p>
-                    <p>Preço: R$ 46,00</p>
-                    <button class="order-button">Fazer Pedido</button>
+            <div class="card">
+                <img src="/assets/img/cola-cola.jpg" alt="Coca-Cola" class="img-card">
+                <h1>Coca-Cola Lata</h1>
+                <div class="card-content">
+                    <h2>R$ 8,00</h2>
+                    <button type="submit" class="card-button">Realizar Pedido</button>
+                    <button type="submit" class="card-button">Adicionar a Sacola</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/assets/img/home-banner1.jpg" alt="Guaraná" class="img-card">
+                <h1>Guaraná</h1>
+                <div class="card-content">
+                    <h2>R$ 7,00</h2>
+                    <button type="submit" class="card-button">Realizar Pedido</button>
+                    <button type="submit" class="card-button">Adicionar a Sacola</button>
                 </div>
             </div>
         </section>
+        <section class="opinions">
+            <div class="opinion-card">
+                <img src="/assets/img/foto.jpg" alt="Foto do Usuário">
+                <div class="opinion-content">
+                    <h2>João Silva</h2>
+                    <p>Adorei a pizza de calabresa! O sabor estava incrível e a entrega foi super rápida. Recomendo a
+                        todos!</p>
+                </div>
+            </div>
+            <div class="opinion-card">
+                <img src="/assets/img/foto.jpg" alt="Foto do Usuário">
+                <div class="opinion-content">
+                    <h2>Maria Oliveira</h2>
+                    <p>O atendimento foi excelente e a pizza marguerita estava deliciosa. Com certeza vou pedir
+                        novamente!</p>
+                </div>
+            </div>
+            <div class="opinion-card">
+                <img src="/assets/img/foto.jpg" alt="Foto do Usuário">
+                <div class="opinion-content">
+                    <h2>Maria Oliveira</h2>
+                    <p>O atendimento foi excelente e a pizza marguerita estava deliciosa. Com certeza vou pedir
+                        novamente!</p>
+                </div>
+            </div>
+            <div class="opinion-card">
+                <img src="/assets/img/foto.jpg" alt="Foto do Usuário">
+                <div class="opinion-content">
+                    <h2>Maria Oliveira</h2>
+                    <p>O atendimento foi excelente e a pizza marguerita estava deliciosa. Com certeza vou pedir
+                        novamente!</p>
+                </div>
+            </div>
+
+
+        </section>
     </main>
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li><a href="#bebidas">Bebidas</a></li>
+                <li><a href="#pedidos">Pedidos</a></li>
+                <li><a href="#fale-conosco">Fale Conosco</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+            <div class="social-media">
+                <h2>Redes Sociais</h2>
+                <a href="https://www.facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                    <img src="/assets/img/facebook_icone.png" alt="Facebook Icon" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <img src="/assets/img/instagram_icone.png" alt="Instagram Icon" class="social-icon">
+                </a>
+                <a href="https://www.tiktok.com" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                    <img src="/assets/img/tiktok_icone.png" alt="TikTok Icon" class="social-icon">
+                </a>
+                <a href="https://www.whatsapp.com" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                    <img src="/assets/img/Whatsapp_icone.png" alt="WhatsApp Icon" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

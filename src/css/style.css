@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Fredoka One;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.600);
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+
+}
+
+header .logo {
+    width: 10%;
+
+    float: left;
+    padding: 16px;
+}
+
+header ul {
+    display: flex;
+    padding: 16px;
+    font-size: 1.2rem;
+
+}
+
+header ul li {
+    padding: 12px;
+    list-style: none;
+
+}
+
+header ul li:hover {
+    background-color: orangered;
+    border-radius: 55px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.shopping-bag {
+    position: relative;
+}
+
+.shopping-bag img {
+    height: 30px;
+    width: auto;
+}
+
+.item-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: orangered;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.search-bar {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.photo-user {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.home-banner {
+    width: 100%;
+    height: 50%;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.home-banner .img-banner {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.home-banner .logo-banner {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    width: 500px;
+    height: auto;
+}
+
+main {
+    width: 100%;
+    margin-top: -5px;
+}
+
+.card-home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffb451; /* Cor de fundo suave para destacar as cartas */
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(25% - 20px); /* Responsividade: 4 cartas por linha */
+    max-width: calc(25% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efeito hover para levantar a carta */
+}
+
+.img-card {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #333;
+}
+
+.card-content {
+    padding: 15px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+.card-button {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px 0;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #d35400;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* 2 cartas por linha em telas menores */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* 1 carta por linha em telas muito pequenas */
+        max-width: 100%;
+    }
+}
+
+
+/*opniões cards */
+.opinions {
+    display: flex;
+}
+
+.opinion-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.opinion-card img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 16px;
+}
+
+.opinion-content {
+    max-width: 600px;
+}
+
+.opinion-content h2 {
+    margin: 0 0 8px;
+    font-size: 1.2em;
+}
+
+.opinion-content p {
+    margin: 0;
+    font-size: 1em;
+    color: #555;
+}
+
+/* footer*/
+footer {
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+.social-media h2 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
