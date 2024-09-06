@@ -2,4 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}body{
+
+    background-image: url("/projeto_pizzaria/fundo-pizza2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(252, 211, 160);
 }
