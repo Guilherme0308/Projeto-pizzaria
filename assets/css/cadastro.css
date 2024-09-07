@@ -1,0 +1,83 @@
+@import url(/assets/css/style.css);
+.box{
+    width: 750px;
+    height: 640px;
+    background-color: #ffca00;
+    padding: 30px 30px 30px 30px;
+    border-radius: 5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-content: center;
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.box-item input{
+    display: inline-block;
+    border-radius: 20px;
+    border: 2px solid;
+    outline: none;
+    color: #a30000;
+    background-color: transparent;
+    padding: 7px;
+    width: 80%;
+    margin: 8px;
+}
+
+.box-item ::placeholder,
+.box-group ::placeholder,
+.box-pass ::placeholder{
+    color: #a30000;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.box-pass input, .box-group input{
+    border-radius: 20px;
+    border: 2px solid;
+    outline: none;
+    color: #a30000;
+    background-color: transparent;
+    padding: 7px;
+    margin: 8px;
+    width: 39%;
+}
+
+#numero, #cep{
+    width: 80px;
+}
+
+#endereco{
+    width: 350px;
+}
+
+h1{
+    text-align: center;
+    font-size: 65px;
+    color: #a30000;
+}
+
+p{
+    font-size: 15px;
+    color: black;
+    padding-bottom: 10px;
+}
+
+a{
+    font-weight: bold;
+    color: #556612;
+}
+
+.btn{
+    width: 100px;
+    height: 50px;
+    border: 2px solid #556612;
+    border-radius: 20px;
+    font-size: 25px;
+    margin-top: 15px;
+    background-color: #a5c135;
+    color: #556612;
+    cursor: pointer;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
