@@ -2,21 +2,50 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xero Pizzaria</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <header>
-        <img src="/src/img/logo_pizzaria.png" alt="" class="logo">
-        <ul>
+        <img src="/src/img/logo_pizzaria.png" alt="Logo da Pizzaria" class="logo">
+   
+        <ul class="nav">
+
             <li><a href="/index.html">Home</a></li>
             <li><a href="/cardapio.html">Cardápio</a></li>
             <li><a href="/fazer_pedido.html">Fazer Pedido</a></li>
-            <li><a href="">Contatos</a></li>
-            <li><a href="">Sobre    </a></li>
+            <li><a href="/contatos.html">Contatos</a></li>
+            <li><a href="/sobre.html">Sobre</a></li>
+            <li><a href="/login.html" class="login">Login</a></li>
+            <li><a href="/profile.html" class="profile"><i class="fa fa-user"></i></a></li>
+            <li class="cart">
+                <a href="carrinho.html"><i class="fa fa-shopping-cart cart-icon"></i>
+                <span class="cart-count">3</span></a>
+            </li>
+            <div class="search-container">
+                <input type="text" placeholder="Pesquisar...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
         </ul>
     </header>
 
+<main>
+    <section class="pedido">
+        <div class="list-pedido">   
+            <!--Aqui vai listar os produtos do carrinho-->
+
+        </div>
+        <div class="dados">
+
+        </div>
+        <div>
+
+        </div>
+    </section>
+    
+</main>
 </body>
 </html>

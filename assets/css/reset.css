@@ -13,3 +13,6 @@
     align-items: center;
     background-color: rgb(252, 211, 160);
 }
+li{
+    list-style: none;
+}

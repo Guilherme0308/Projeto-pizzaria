@@ -1,5 +1,19 @@
-@import url(/assets/css/style.css);
-.box{
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import url();
+
+
+.cadast {
+    display: flex;
+    background-image: url("/projeto_pizzaria/fundo-pizza2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
     width: 750px;
     height: 640px;
     background-color: #ffca00;
@@ -13,7 +27,7 @@
     box-shadow: 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.box-item input{
+.box-item input {
     display: inline-block;
     border-radius: 20px;
     border: 2px solid;
@@ -27,13 +41,14 @@
 
 .box-item ::placeholder,
 .box-group ::placeholder,
-.box-pass ::placeholder{
+.box-pass ::placeholder {
     color: #a30000;
     padding: 5px;
     font-size: 16px;
 }
 
-.box-pass input, .box-group input{
+.box-pass input,
+.box-group input {
     border-radius: 20px;
     border: 2px solid;
     outline: none;
@@ -44,32 +59,33 @@
     width: 39%;
 }
 
-#numero, #cep{
+#numero,
+#cep {
     width: 80px;
 }
 
-#endereco{
+#endereco {
     width: 350px;
 }
 
-h1{
+h1 {
     text-align: center;
     font-size: 65px;
     color: #a30000;
 }
 
-p{
+p {
     font-size: 15px;
     color: black;
     padding-bottom: 10px;
 }
 
-a{
+a {
     font-weight: bold;
     color: #556612;
 }
 
-.btn{
+.btn {
     width: 100px;
     height: 50px;
     border: 2px solid #556612;

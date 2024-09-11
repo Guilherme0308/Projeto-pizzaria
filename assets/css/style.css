@@ -1,41 +1,93 @@
 @import url(/assets/css/reset.css);
+@import url(/assets/css/responsive.css);
+@import url(/assets/css/login.css);
+@import url(/assets/css/cadastro.css);
+@import url(/assets/css/cardapio.css);
+@import url(/assets/css/profile.css);
+    
 header {
     display: flex;
-    justify-content: space-between;
+    position: absolute;
+    z-index: 99;
+    width: 100% ;
     align-items: center;
-    padding: 10px;
-    background-color: #eb0000;
-    color: white;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #a30000;
+    border-bottom: 1px solid #ddd;
 }
-
-header .logo {
-    width: 100px;
-    padding: 6px;
-    margin-right: 12px;
+.logo {
+    height: 50px;
 }
-
-header ul {
-    list-style: none;
+.search-container {
     display: flex;
-    gap: 20px;
+    align-items: center;
 }
-
-header ul li a {
+.search-container input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.search-container button {
+    background-color: #f39c12;
+    border: none;
     color: white;
-    text-decoration: none;
-    font-weight: bold;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
 }
-header .log{
-color: white;
-font-size: 1.2rem;
-
+.search-container button i {
+    font-size: 16px;
 }
-
-header ul li a:hover {
-    text-decoration: underline;
-}.home-banner {
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.nav li {
+    margin: 0 10px;
     position: relative;
+}
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+.nav a:hover {
+    color: #f39c12;
+}
+.nav .cart {
+    position: relative;
+}
+.nav .cart .cart-icon {
+    font-size: 24px;
+}
+.nav .cart .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
 
+/* home */
+.home-banner {
+    position: relative;
+    text-align: center;
+    color: white;
 }
 .home-banner .banner {
     width: 100%;
@@ -78,54 +130,49 @@ header ul li a:hover {
     background-color: #ff6347;
     transform: translate(-50%, -50%) scale(1.05);
 }
-
-/* cards pizza */
-.pizzas{
+.home-banner .banner-button:hover {
+    background-color: #e67e22;
+}
+.pizzas {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 .pizza-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    margin: 16px;
-}
-
-.pizza-image {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.pizza-info {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 300px;
     text-align: center;
-    margin-top: 12px;
 }
-
+.pizza-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+.pizza-info {
+    padding: 15px;
+}
 .pizza-info h2 {
-    font-size: 1.5em;
-    margin-bottom: 8px;
+    margin: 0;
+    font-size: 18px;
 }
-
 .pizza-info p {
-    margin: 4px 0;
+    margin: 5px 0;
+    font-size: 16px;
 }
-
 .order-button {
-    background-color: #ff6347;
-    color: white;
+    background-color: #f39c12;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
 }
-
 .order-button:hover {
-    background-color: #ff4500;
+    background-color: #e67e22;
 }
