@@ -1,34 +1,41 @@
+/* Importação de outros estilos */
 @import url(/assets/css/reset.css);
 @import url(/assets/css/responsive.css);
 @import url(/assets/css/login.css);
 @import url(/assets/css/cadastro.css);
 @import url(/assets/css/cardapio.css);
 @import url(/assets/css/profile.css);
-    
+@import url(/assets/css/carrinho.css);
+
+/* Header (cabeçalho) */
 header {
     display: flex;
     position: absolute;
     z-index: 99;
-    width: 100% ;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #a30000;
-    border-bottom: 1px solid #ddd;
+    padding: 16px;
+    background-color: #a30000; /* Cor principal */
 }
+
 .logo {
     height: 50px;
 }
+
+/* Container de busca */
 .search-container {
     display: flex;
     align-items: center;
 }
+
 .search-container input[type="text"] {
     padding: 5px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
 }
+
 .search-container button {
     background-color: #f39c12;
     border: none;
@@ -39,9 +46,12 @@ header {
     cursor: pointer;
     font-size: 16px;
 }
+
 .search-container button i {
     font-size: 16px;
 }
+
+/* Navegação */
 .nav {
     list-style: none;
     margin: 0;
@@ -49,25 +59,34 @@ header {
     display: flex;
     align-items: center;
 }
+
 .nav li {
     margin: 0 10px;
     position: relative;
 }
+
 .nav a {
     text-decoration: none;
-    color: #fff;
+    color: #fff; /* Texto branco para contraste */
     font-weight: bold;
     font-size: 16px;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
 }
+
 .nav a:hover {
-    color: #f39c12;
+    color: #f39c12; /* Cor de destaque ao passar o mouse */
 }
+
+/* Estilo do ícone do carrinho */
 .nav .cart {
     position: relative;
 }
+
 .nav .cart .cart-icon {
     font-size: 24px;
 }
+
 .nav .cart .cart-count {
     position: absolute;
     top: -5px;
@@ -82,34 +101,43 @@ header {
     justify-content: center;
     font-size: 12px;
 }
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
 
-/* home */
+/* Banner da Home */
 .home-banner {
     position: relative;
     text-align: center;
     color: white;
 }
+
 .home-banner .banner {
     width: 100%;
     height: auto;
 }
+
 .home-banner .logo-banner {
     position: absolute;
     width: 30%;
-    height: auto;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 5rem;
     text-decoration: underline;
     color: #fff;
     padding: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.banner-button {
     z-index: 2;
+}
+
+.banner-button {
     position: absolute;
     top: 45%;
     left: 50%;
@@ -124,21 +152,22 @@ header {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s, transform 0.3s;
+    z-index: 2;
 }
 
 .banner-button:hover {
     background-color: #ff6347;
     transform: translate(-50%, -50%) scale(1.05);
 }
-.home-banner .banner-button:hover {
-    background-color: #e67e22;
-}
+
+/* Estilo da seção de pizzas */
 .pizzas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
 }
+
 .pizza-card {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -147,23 +176,35 @@ header {
     margin: 10px;
     width: 300px;
     text-align: center;
+    transition: box-shadow 0.3s ease;
 }
+
+.pizza-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 .pizza-card img {
     width: 100%;
     height: auto;
     border-bottom: 1px solid #ddd;
 }
+
 .pizza-info {
     padding: 15px;
 }
+
 .pizza-info h2 {
     margin: 0;
     font-size: 18px;
+    color: #333;
 }
+
 .pizza-info p {
     margin: 5px 0;
     font-size: 16px;
+    color: #555;
 }
+
 .order-button {
     background-color: #f39c12;
     border: none;
@@ -172,7 +213,9 @@ header {
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
 .order-button:hover {
     background-color: #e67e22;
 }

@@ -1,47 +1,34 @@
-/* Media Queries para responsividade */
 @media (max-width: 768px) {
-    header {
+    .nav {
+        display: none;
         flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .search-container input {
+        position: absolute;
+        top: 60px;
+        left: 0;
         width: 100%;
+        background-color: #a30000;
+        padding: 20px 0;
     }
 
-    .home-banner .logo-banner {
-        font-size: 3rem;
-        width: 50%;
+    .nav.active {
+        display: flex;
     }
 
-    .banner-button {
-        font-size: 1rem;
-        padding: 10px 20px;
+    .nav li {
+        margin: 15px 0;
     }
 
-    .pizzas {
+    .search-container {
         flex-direction: column;
-        align-items: center;
+        width: 100%;
+        margin: 20px 0;
     }
 
-    .pizza-card {
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    .home-banner .logo-banner {
-        font-size: 2rem;
-        width: 70%;
+    .search-container input[type="text"] {
+        width: 80%;
     }
 
-    .banner-button {
-        font-size: 0.8rem;
-        padding: 8px 16px;
+    .menu-toggle {
+        display: block;
     }
 }
