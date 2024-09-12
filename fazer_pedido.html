@@ -34,46 +34,61 @@
         </ul>
         <button class="menu-toggle"><i class="fa fa-bars"></i></button>
     </header>
+
     <main>
         <section class="pedido">
-            <div class="user-info">
-                <!-- informações do usuário -->
-                <h3>Informações de Entrega</h3>
-                <ul>
-                    <li><strong>Nome: </strong>Arthur da Silva Sauro</li>
-                    <li><strong>Endereço: </strong>Estrada do Mendanha, 555 - Campo Grande</li>
-                    <li><strong>E-mail: </strong>arthursauro@gmail.com</li>
-                    <li><strong>Telefone: </strong> +55 (21) 40028-9220</li>
-                </ul>
-                <button class="user-info-bnt">Alterar</button>
-            </div>
+            <div class="group-ship">
+                <div class="ship-info">
+                    <!-- informações do usuário -->
+                    <h1>Informações de Entrega</h1>
+                    <ul>
+                        <li><strong>Nome: </strong>Arthur da Silva Sauro</li>
+                        <li><strong>Endereço: </strong>Estrada do Mendanha, 555 - Campo Grande</li>
+                        <li><strong>E-mail: </strong>arthursauro@gmail.com</li>
+                        <li><strong>Telefone: </strong> +55 (21) 40028-9220</li>
+                    </ul>
+                    <button>Alterar informações</button>
+                </div>
 
-            <div class="pag-card">
-                <!-- informações do cartao -->
-                <h3>Pagamento</h3>
-            </div>
+                <div class="pag-info">
+                    <!-- total e subtotal -->
+                    <h1>Resumo</h1>
+                    <div class="pag-subtotal">
+                        <p class="fr-info">Subtotal</p>
+                        <p>R$76,98</p>
+                    </div>
 
-            <div class="total-cart">
-                <!-- total e subtotal -->
-                <h3>Resumo</h3>
-                <p>Subtotal</p><p>R$76,98</p>
-                <p>Frete</p><p>grátis</p>
-                <p>Total</p><p>R$76,98</p>
+                    <div class="pag-fr">
+                        <p class="fr-info">Frete</p>
+                        <p>grátis</p>
+                    </div>
 
-            </div>
+                    <div class="pag-total">
+                        <p class="fr-info">Total</p>
+                        <p>R$76,98</p>
+                    </div>
 
-            <div class="cart">
-                <!-- carrinho -->
-                <h3>Carrinho</h3>
-                <ul>
-                    <li>Pizza Portuguesa Família</li>
-                    <li>Pizza Doce Chocolate e Ninho</li>
-                    <li>Pepsi 2L</li>
-                    <li>Adicional Maionese Verde</li>
-                </ul>
+                </div>
+
+                <div class="ship-card">
+                    <!-- informações do cartao -->
+                    <h1>Pagamento</h1>
+                </div>
+
+                <div class="pag-cart">
+                    <!-- carrinho -->
+                    <h1 id="tittle">Carrinho</h1>
+                    <ul>
+                        <li>Pizza Portuguesa Família</li>
+                        <li>Pizza Doce Chocolate e Ninho</li>
+                        <li>Pepsi 2L</li>
+                        <li>Adicional Maionese Verde</li>
+                    </ul>
+
+                    <button>Continuar comprando</button>
+                </div>
             </div>
         </section>
-
     </main>
 </body>
 
