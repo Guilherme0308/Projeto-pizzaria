@@ -7,26 +7,29 @@
 @import url(/assets/css/profile.css);
 @import url(/assets/css/carrinho.css);
 
-/* Header (cabeçalho) */header {
+/* Header (cabeçalho) */
+header {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 16px;
+    padding: 16px 20px;
     background-color: #a30000; /* Cor principal */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 99;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
     height: 50px;
+    transition: transform 0.5s ease;
 }
-.logo:hover{
-transform: scale(1.1);
-transition: 0.5s;
+
+.logo:hover {
+    transform: scale(1.1);
 }
+
 /* Navegação */
 .nav {
     list-style: none;
@@ -34,12 +37,11 @@ transition: 0.5s;
     padding: 0;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px; /* Espaçamento entre itens */
 }
 
 .nav li {
     position: relative;
- justify-content: space-between;
 }
 
 .nav a {
@@ -62,12 +64,13 @@ transition: 0.5s;
 
 .nav .cart .cart-icon {
     font-size: 24px;
+    color: #fff;
 }
 
 .nav .cart .cart-count {
     position: absolute;
-    top: -5px;
-    right: -1px;
+    top: -8px;
+    right: -8px;
     background-color: #e74c3c;
     color: white;
     border-radius: 50%;
@@ -77,6 +80,7 @@ transition: 0.5s;
     align-items: center;
     justify-content: center;
     font-size: 12px;
+    font-weight: bold;
 }
 
 /* Search Container */
@@ -91,34 +95,44 @@ transition: 0.5s;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
+    outline: none;
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #f39c12;
 }
 
 .search-container button {
     background-color: #f39c12;
     border: none;
     color: white;
-    padding: 8px 10px;
+    padding: 8px 12px;
     margin-left: 5px;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #e67e22;
 }
 
 .search-container button i {
     font-size: 16px;
 }
 
-/* Menu Toggle (for mobile) */
+/*menu-hambuguer */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
     color: white;
-    background-color: #f39c12;
     font-size: 28px;
     cursor: pointer;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
     .nav {
         flex-direction: column;
@@ -128,15 +142,53 @@ transition: 0.5s;
         left: -100%;
         width: 100%;
         transition: left 0.3s ease;
+        padding-bottom: 20px;
     }
 
     .nav.active {
         left: 0;
     }
 
+    .nav a {
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
     .menu-toggle {
         display: block;
-        color: #fff;
+    }
+
+    .search-container {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav {
+        flex-direction: column;
+        background-color: #a30000;
+        position: absolute;
+        top: 65px;
+        left: -100%;
+        width: 100%;
+        transition: left 0.3s ease;
+        padding-bottom: 20px;
+    }
+
+    .nav.active {
+        left: 0;
+    }
+
+    .nav a {
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 
     .search-container {
@@ -188,12 +240,22 @@ transition: 0.5s;
     transition: background-color 0.3s, transform 0.3s;
     z-index: 2;
 }
+@media (max-width: 768px) {
+    .home-banner {
+        height: auto; 
+    }
+    
+    .home-banner .logo-banner {
+        width: 8vw; 
+        top: 15%; 
+    }
 
-.banner-button:hover {
-    background-color: #a30000;
-    transform: translate(-50%, -50%) scale(1.1);
+    .banner-button {
+        top: 60%; 
+        font-size: 1rem; 
+        padding: 10px 20px;
+    }
 }
-
 /* Estilo da seção de pizzas */
 .pizzas {
     display: flex;
