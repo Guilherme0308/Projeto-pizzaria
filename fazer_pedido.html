@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
+
 <body>
     <header>
         <img src="/src/img/logo_pizzaria.png" alt="Logo da Pizzaria" class="logo">
-   
+
         <ul class="nav">
 
             <li><a href="/index.html">Home</a></li>
@@ -23,7 +25,7 @@
             <li><a href="/profile.html" class="profile"><i class="fa fa-user"></i></a></li>
             <li class="cart">
                 <a href="/carrinho.html"><i class="fa fa-shopping-cart cart-icon"></i>
-                <span class="cart-count">3</span></a>
+                    <span class="cart-count">3</span></a>
             </li>
             <div class="search-container">
                 <input type="text" placeholder="Pesquisar...">
@@ -32,22 +34,49 @@
         </ul>
         <button class="menu-toggle"><i class="fa fa-bars"></i></button>
     </header>
-<main>
-    <section class="pedido">
-        <div class="list-pedido">   
-            <!--Aqui vai listar os produtos do carrinho-->
+    <main>
+        <section class="pedido">
+            <div class="user-info">
+                <!-- informações do usuário -->
+                <h3>Informações de Entrega</h3>
+                <ul>
+                    <li><strong>Nome: </strong>Arthur da Silva Sauro</li>
+                    <li><strong>Endereço: </strong>Estrada do Mendanha, 555 - Campo Grande</li>
+                    <li><strong>E-mail: </strong>arthursauro@gmail.com</li>
+                    <li><strong>Telefone: </strong> +55 (21) 40028-9220</li>
+                </ul>
+                <button class="user-info-bnt">Alterar</button>
+            </div>
 
-        </div>
-        <div class="dados">
+            <div class="pag-card">
+                <!-- informações do cartao -->
+                <h3>Pagamento</h3>
+            </div>
 
-        </div>
-        <div>
+            <div class="total-cart">
+                <!-- total e subtotal -->
+                <h3>Resumo</h3>
+                <p>Subtotal</p><p>R$76,98</p>
+                <p>Frete</p><p>grátis</p>
+                <p>Total</p><p>R$76,98</p>
 
-        </div>
-    </section>
-    
-</main>
+            </div>
+
+            <div class="cart">
+                <!-- carrinho -->
+                <h3>Carrinho</h3>
+                <ul>
+                    <li>Pizza Portuguesa Família</li>
+                    <li>Pizza Doce Chocolate e Ninho</li>
+                    <li>Pepsi 2L</li>
+                    <li>Adicional Maionese Verde</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
 </body>
 
 <script src="/assets/js/script.js"></script>
+
 </html>
