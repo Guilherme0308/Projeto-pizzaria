@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
 }body{
-
     background-image: url("/projeto_pizzaria/fundo-pizza2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,7 +14,8 @@ li{
     list-style: none;
 }
 main {
-    padding-top: 64px; 
+    padding: 64px; 
     position: relative;
+    margin-top: 64px;
     
 }
