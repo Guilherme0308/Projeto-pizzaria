@@ -1,99 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
-
-
-.cadast {
+.cadast{
     display: flex;
-    background-image: url("/projeto_pizzaria/fundo-pizza2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    align-content: center;
-    text-align: center;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    margin: 0;
 }
-
-.box {
-    width: 750px;
-    height: 640px;
+.box-cadast {
     background-color: #ffca00;
-    padding: 30px 30px 30px 30px;
-    border-radius: 5%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    align-content: center;
-    box-shadow: 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
 }
 
-.box-item input {
-    display: inline-block;
-    border-radius: 20px;
-    border: 2px solid;
-    outline: none;
-    color: #a30000;
-    background-color: transparent;
-    padding: 7px;
-    width: 80%;
-    margin: 8px;
-}
-
-.box-item ::placeholder,
-.box-group ::placeholder,
-.box-pass ::placeholder {
-    color: #a30000;
-    padding: 5px;
-    font-size: 16px;
-}
-
-.box-pass input,
-.box-group input {
-    border-radius: 20px;
-    border: 2px solid;
-    outline: none;
-    color: #a30000;
-    background-color: transparent;
-    padding: 7px;
-    margin: 8px;
-    width: 39%;
-}
-
-#numero,
-#cep {
-    width: 80px;
-}
-
-#endereco {
-    width: 350px;
-}
-
-h1 {
+.box-cadast h1 {
     text-align: center;
-    font-size: 65px;
-    color: #a30000;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-p {
-    font-size: 15px;
-    color: black;
-    padding-bottom: 10px;
+.box-cadast p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
 }
 
-a {
-    font-weight: bold;
-    color: #556612;
+.box a {
+    color: #007bff;
+    text-decoration: none;
 }
 
-.btn {
-    width: 100px;
-    height: 50px;
-    border: 2px solid #556612;
-    border-radius: 20px;
-    font-size: 25px;
-    margin-top: 15px;
+.box-item,
+.box-group,
+.box-pass {
+    margin-bottom: 15px;
+}
+
+.box-item input,
+.box-group input,
+.box-pass input {
+    width: 100%;
+    background-color: #ffca00;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-color:    #a30000;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.box-group {
+    display: flex;
+    gap: 10px;
+}
+
+.box-group input {
+    flex: 1;
+}
+
+.box-pass input {
+    margin-bottom: 10px;
+}
+
+button.btn {
+    width: 100%;
+    padding: 12px;
     background-color: #a5c135;
-    color: #556612;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #718d00;
 }
