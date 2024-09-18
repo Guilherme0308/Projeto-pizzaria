@@ -1,34 +1,37 @@
-section.logi {
+.logi {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0
+    height: 60vh;
+    margin: 0;
 }
 
 .login-box {
     background-color: #ffca00;
     padding: 30px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 600px;
+    height: 400px;
 }
 
-.box h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
+.login-box h1 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 5px;
+    color: #a30000;
 }
 
 .login-box p {
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 50px;
     font-size: 14px;
     color: #666;
 }
 
 .box a {
-    color: orangered;
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -39,7 +42,7 @@ section.logi {
 .box-item {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .box-item input {
@@ -51,7 +54,7 @@ section.logi {
     width: 100%;
 }
 
-.btn {
+button.btn {
     background-color: orangered;
     color: #fff;
     border: none;
@@ -63,6 +66,6 @@ section.logi {
     margin-top: 20px;
 }
 
-.btn:hover {
-    background-color: #e64e00;
+button.btn:hover {
+    background-color: #c4de5c;
 }
