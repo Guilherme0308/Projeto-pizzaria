@@ -5,26 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xero Pizzaria</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 
 <body>
     <header>
-        <img src="/src/img/logo_pizzaria.png" alt="Logo da Pizzaria" class="logo">
+        <img src="src/img/logo_pizzaria.png" alt="Logo da Pizzaria" class="logo">
 
         <ul class="nav">
 
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/cardapio.html">Cardápio</a></li>
-            <li><a href="/fazer_pedido.html">Fazer Pedido</a></li>
-            <li><a href="/contatos.html">Contatos</a></li>
-            <li><a href="/sobre.html">Sobre</a></li>
-            <li><a href="/login.html" class="login">Login</a></li>
-            <li><a href="/profile.html" class="profile"><i class="fa fa-user"></i></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="fazer_pedido.html">Fazer Pedido</a></li>
+            <li><a href="contatos.html">Contatos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="login.html" class="login">Login</a></li>
+            <li><a href="profile.html" class="profile"><i class="fa fa-user"></i></a></li>
             <li class="cart">
-                <a href="/carrinho.html"><i class="fa fa-shopping-cart cart-icon"></i>
+                <a href="carrinho.html"><i class="fa fa-shopping-cart cart-icon"></i>
                     <span class="cart-count">3</span></a>
             </li>
             <div class="search-container">
@@ -53,19 +53,23 @@
                 <div class="pag-info">
                     <!-- total e subtotal -->
                     <h1>Resumo</h1>
-                    <div class="pag-subtotal">
-                        <p class="fr-info">Subtotal</p>
-                        <p>R$76,98</p>
-                    </div>
+                    <div class="pag-info-table">
+                        <table>
+                            <tr>
+                                <th>subtotal</th>
+                                <td>R$76,98</td>
+                            </tr>
 
-                    <div class="pag-fr">
-                        <p class="fr-info">Frete</p>
-                        <p>grátis</p>
-                    </div>
+                            <tr>
+                                <th>frete</th>
+                                <td>gratis</td>
+                            </tr>
 
-                    <div class="pag-total">
-                        <p class="fr-info">Total</p>
-                        <p>R$76,98</p>
+                            <tr class="total-box">
+                                <th>total</th>
+                                <td>R$76,98</td>
+                            </tr>
+                        </table>
                     </div>
 
                 </div>
@@ -73,11 +77,75 @@
                 <div class="ship-card">
                     <!-- informações do cartao -->
                     <h1>Pagamento</h1>
+
+                    <div class="img-card">
+                        <img src="src/img/visa.svg" />
+                        <img src="src/img/mastercard.svg" />
+                        <img src="src/img/elo.svg" />
+                    </div>
+
+                    <div class="ship-card-form">
+                        <form>
+
+                            <div class="ship-card-form">
+                                <label>Nome Impresso no Cartão</label>
+                                <input type="text" placeholder="Nome Impresso no Cartão" request />
+                            </div>
+
+                            <div class="ship-card-form">
+                                <label>Número do Cartão</label>
+                                <input type="text" placeholder="Número do Cartão" request />
+                            </div>
+
+                            <div class="ship-card-selection">
+                                <div class="ship-card-group">
+                                    <spam>Validade</spam>
+                                    <div class="selection">
+                                        <select>
+                                            <option value="Mês">Mês</option>
+                                            <option value="Jan">Jan</option>
+                                            <option value="Fev">Fev</option>
+                                            <option value="Mar">Mar</option>
+                                            <option value="Abr">Abr</option>
+                                            <option value="Maio">Maio</option>
+                                            <option value="Jun">Jun</option>
+                                            <option value="Jul">Jul</option>
+                                            <option value="Ago">Ago</option>
+                                            <option value="Set">Set</option>
+                                            <option value="Out">Out</option>
+                                            <option value="Nov">Nov</option>
+                                            <option value="Dez">Dez</option>
+                                        </select>
+
+                                        <select>
+                                            <option value="Ano">Ano</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                            <option value="2031">2031</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="ship-card-group">
+                                    <label>CVV</label>
+                                    <input type="text" placeholder="CVV" request />
+                                </div>
+
+                            </div>
+
+                    </div>
+
+                    </form>
                 </div>
 
                 <div class="pag-cart">
                     <!-- carrinho -->
-                    <h1 id="tittle">Carrinho</h1>
+                    <h1>Carrinho</h1>
+
                     <ul>
                         <li>Pizza Portuguesa Família</li>
                         <li>Pizza Doce Chocolate e Ninho</li>
@@ -85,13 +153,14 @@
                         <li>Adicional Maionese Verde</li>
                     </ul>
 
-                    <button>Continuar comprando</button>
+                    <button>Finalizar Compra</button>
                 </div>
+
             </div>
         </section>
     </main>
 </body>
 
-<script src="/assets/js/script.js"></script>
+<script src="assets/js/script.js"></script>
 
 </html>
