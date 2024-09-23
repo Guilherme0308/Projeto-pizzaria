@@ -1,30 +1,105 @@
-.group-ship {
+section{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+}
+
+.group-pedido {
+    display: flex;
     justify-content: space-between;
     gap: 10px;
     font-size: 16px;
 }
 
-h1 {
+.group-pedido h1 {
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 10px;
     font-size: 25px;
+    color: #a30000;
 }
 
-.ship-info {
-    width: 800px;
-    height: 230px;
-    background-color: #a65b1f;
+.info-box {
+    width: 900px;
+    height: flex;
+    background-color: #ffca00;
     border-radius: 15px;
     padding: 10px;
-    font-size: 16px;
+    margin: 5px;
 }
 
-.ship-info button,
-.pag-cart button {
+.pag-box {
+    width: 900px;
+    height: flex;
+    background-color: #ffca00;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.pag-box input {
+    background-color: #a30000;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    margin: 5px 0 5px 0;
+}
+
+.pag-box ::placeholder {
+    color: #ff4e4e;
+}
+
+.pag-box select {
+    border: none;
+    border-radius: 5px;
+    background-color: #a30000;
+    color: #ffff;
+    outline: none;
+    width: 60px;
+    height: 40px;
+    margin: 10px;
+}
+
+.car-box {
+    width: 500px;
+    height: flex;
+    background-color: #ffca00;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.car-box li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.total-box {
+    width: 500px;
+    height: flex;
+    background-color: #ffca00;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+.total-box li {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.total-box #total{
+    font-weight: bold;
+    font-size: larger;
+    border-top: 1px solid #a30000;
+    padding: 5px;
+}
+
+button {
     align-self: center;
     color: #ffff;
     background-color: #6E8318;
@@ -39,109 +114,11 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-.ship-info button:hover,
-.pag-cart button:hover{
+button:hover {
     background-color: #718d00;
 }
 
-.pag-info {
-    width: 580px;
-    height: 230px;
-    background-color: #a65b1f;
-    border-radius: 15px;
-    padding: 10px 0 0 0;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
-.pag-info-table tr {
-    display: flex;
-    justify-content: space-between;
-    gap: 370px;
-    padding: 10px;
-    margin: 10px;
-}
-
-.total-box {
-    background-color: #6E3C14;
-    padding: 10px;
-    border-radius: 20px;
-    font-weight: bold;
-    color: #ffff;
-}
-
-.pag-cart {
-    background-color: #a65b1f;
-    border-radius: 15px;
-    padding: 10px;
-    width: 580px;
-    height: 230px;
-}
-
-.ship-card {
-    width: 800px;
-    height: 350px;
-    background-color: #a65b1f;
-    border-radius: 15px;
-    padding: 10px;
-}
-
-.ship-card-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.ship-card-form input {
-    border-radius: 10px;
-    border: none;
-    padding: 10px;
-    margin: 5px;
-    background-color: #D78849;
-    outline: none;
-    font-size: 16px;
-}
-
-.ship-card-group {
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    gap: 10px;
-}
-
-.ship-card-group spam,
-.ship-card-group label {
-    align-self: center;
-}
-
-.ship-card-selection {
-    display: flex;
-    align-content: space-between;
-    gap: 10px;
-    justify-content: center;
-}
-
-.selection {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.selection select {
-    border: none;
-    border-radius: 5px;
-    background-color: #CC7C3C;
-    color: #ffff;
-    outline: none;
-    width: 70px;
-    height: 40px;
-}
-
-::placeholder {
-    color: #ffff;
-}
-
-.img-card img {
+img {
     width: 50px;
     margin: 5px;
 }

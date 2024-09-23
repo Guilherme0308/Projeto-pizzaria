@@ -36,124 +36,120 @@
     </header>
 
     <main>
-        <section class="pedido">
-            <div class="group-ship">
-                <div class="ship-info">
-                    <!-- informações do usuário -->
-                    <h1>Informações de Entrega</h1>
-                    <ul>
-                        <li><strong>Nome: </strong>Arthur da Silva Sauro</li>
-                        <li><strong>Endereço: </strong>Estrada do Mendanha, 555 - Campo Grande</li>
-                        <li><strong>E-mail: </strong>arthursauro@gmail.com</li>
-                        <li><strong>Telefone: </strong> +55 (21) 40028-9220</li>
-                    </ul>
-                    <button>Alterar informações</button>
-                </div>
+        <section class="fazer-pedido">
+            <div class="group-pedido">
 
-                <div class="pag-info">
-                    <!-- total e subtotal -->
-                    <h1>Resumo</h1>
-                    <div class="pag-info-table">
-                        <table>
-                            <tr>
-                                <th>subtotal</th>
-                                <td>R$76,98</td>
-                            </tr>
-
-                            <tr>
-                                <th>frete</th>
-                                <td>gratis</td>
-                            </tr>
-
-                            <tr class="total-box">
-                                <th>total</th>
-                                <td>R$76,98</td>
-                            </tr>
-                        </table>
+                <div class="left">
+                    <!-- informações -->
+                    <div class="info-box">
+                        <h1>Informações de Entrega</h1>
+                        <ul>
+                            <li>Nome: Arthur da Silva Sauro</li>
+                            <li>Endereço: Estrada do Mendanha, 555 - Campo Grande</li>
+                            <li>E-mail: arthursauro@gmail.com</li>
+                            <li>Telefone: +55 (21) 40028-9220</li>
+                        </ul>
+                        <button>Alterar informações</button>
                     </div>
 
-                </div>
+                    <!-- pagamento -->
+                    <div class="pag-box">
+                        <h1>Pagamento</h1>
 
-                <div class="ship-card">
-                    <!-- informações do cartao -->
-                    <h1>Pagamento</h1>
+                        <div class="img-card">
+                            <img src="src/img/visa.svg" />
+                            <img src="src/img/mastercard.svg" />
+                            <img src="src/img/elo.svg" />
+                        </div>
 
-                    <div class="img-card">
-                        <img src="src/img/visa.svg" />
-                        <img src="src/img/mastercard.svg" />
-                        <img src="src/img/elo.svg" />
-                    </div>
-
-                    <div class="ship-card-form">
                         <form>
 
-                            <div class="ship-card-form">
-                                <label>Nome Impresso no Cartão</label>
-                                <input type="text" placeholder="Nome Impresso no Cartão" request />
-                            </div>
+                            <label>Nome Impresso no Cartão</label>
+                            <input type="text" placeholder="Nome Impresso no Cartão" request />
+                            <label>Número do Cartão</label>
+                            <input type="text" placeholder="Número do Cartão" request />
+                            <label>CVV</label>
+                            <input type="text" placeholder="CVV" request />
 
-                            <div class="ship-card-form">
-                                <label>Número do Cartão</label>
-                                <input type="text" placeholder="Número do Cartão" request />
-                            </div>
+                            <label>Validade</label>
+                            <select>
+                                <option value="Mês">Mês</option>
+                                <option value="Jan">Jan</option>
+                                <option value="Fev">Fev</option>
+                                <option value="Mar">Mar</option>
+                                <option value="Abr">Abr</option>
+                                <option value="Maio">Maio</option>
+                                <option value="Jun">Jun</option>
+                                <option value="Jul">Jul</option>
+                                <option value="Ago">Ago</option>
+                                <option value="Set">Set</option>
+                                <option value="Out">Out</option>
+                                <option value="Nov">Nov</option>
+                                <option value="Dez">Dez</option>
+                            </select>
 
-                            <div class="ship-card-selection">
-                                <div class="ship-card-group">
-                                    <spam>Validade</spam>
-                                    <div class="selection">
-                                        <select>
-                                            <option value="Mês">Mês</option>
-                                            <option value="Jan">Jan</option>
-                                            <option value="Fev">Fev</option>
-                                            <option value="Mar">Mar</option>
-                                            <option value="Abr">Abr</option>
-                                            <option value="Maio">Maio</option>
-                                            <option value="Jun">Jun</option>
-                                            <option value="Jul">Jul</option>
-                                            <option value="Ago">Ago</option>
-                                            <option value="Set">Set</option>
-                                            <option value="Out">Out</option>
-                                            <option value="Nov">Nov</option>
-                                            <option value="Dez">Dez</option>
-                                        </select>
+                            <select>
+                                <option value="Ano">Ano</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                                <option value="2031">2031</option>
+                            </select>
 
-                                        <select>
-                                            <option value="Ano">Ano</option>
-                                            <option value="2025">2025</option>
-                                            <option value="2026">2026</option>
-                                            <option value="2027">2027</option>
-                                            <option value="2028">2028</option>
-                                            <option value="2029">2029</option>
-                                            <option value="2030">2030</option>
-                                            <option value="2031">2031</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="ship-card-group">
-                                    <label>CVV</label>
-                                    <input type="text" placeholder="CVV" request />
-                                </div>
-
-                            </div>
+                        </form>
 
                     </div>
 
-                    </form>
                 </div>
 
-                <div class="pag-cart">
+                <div class="right">
                     <!-- carrinho -->
-                    <h1>Carrinho</h1>
+                    <div class="car-box">
+                        <h1>Carrinho</h1>
 
-                    <ul>
-                        <li>Pizza Portuguesa Família</li>
-                        <li>Pizza Doce Chocolate e Ninho</li>
-                        <li>Pepsi 2L</li>
-                        <li>Adicional Maionese Verde</li>
-                    </ul>
+                        <ul>
+                            <li>
+                                <spam>Pizza Portuguesa Família</spam>
+                                <spam>1</spam>
+                            </li>
+                            <li>
+                                <spam>Pizza Doce Chocolate e Ninho</spam>
+                                <spam>1</spam>
+                            </li>
+                            <li>
+                                <spam>Pepsi 2L</spam>
+                                <spam>1</spam>
+                            </li>
+                            <li>
+                                <spam>Adicional Maionese Verde</spam>
+                                <spam>1</spam>
+                            </li>
+                        </ul>
+                    </div>
 
-                    <button>Finalizar Compra</button>
+                    <!-- total -->
+                    <div class="total-box">
+                        <h1>Total</h1>
+                        <ul>
+                            <li>
+                                <spam>subtotal</spam>
+                                <spam>R$76,98</spam>
+                            </li>
+                            <li>
+                                <spam>frete</spam>
+                                <spam>grátis</spam>
+                            </li>
+                            <li id="total">
+                                <spam>total</spam>
+                                <spam>R$76,98</spam>
+                            </li>
+                        </ul>
+                        <button>Finalizar Compra</button>
+                    </div>
+
                 </div>
 
             </div>
