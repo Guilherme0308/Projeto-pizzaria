@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
 }body{
-    background-image: url("/projeto_pizzaria/fundo-pizza2.jpg");
+    background-image: url("/src/img/fundo-pizza2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
