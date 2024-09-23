@@ -13,7 +13,6 @@ section{
 .group-pedido h1 {
     text-align: center;
     text-transform: uppercase;
-    padding-bottom: 10px;
     font-size: 25px;
     color: #a30000;
 }
@@ -44,10 +43,11 @@ section{
     padding: 10px;
     width: 100%;
     margin: 5px 0 5px 0;
+    color: #ffff;
 }
 
 .pag-box ::placeholder {
-    color: #ff4e4e;
+    color: #ffff;
 }
 
 .pag-box select {
