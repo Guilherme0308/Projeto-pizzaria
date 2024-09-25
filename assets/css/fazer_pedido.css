@@ -1,5 +1,6 @@
-section{
+.fazer-pedido{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -119,7 +120,7 @@ button:hover {
     background-color: #718d00;
 }
 
-img {
+.img-card {
     width: 50px;
     margin: 5px;
 }

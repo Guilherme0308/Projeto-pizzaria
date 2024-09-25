@@ -1,4 +1,4 @@
-@import url('/assets/css/style.css');
+@import url('../css/style.css');
 .container {
     display: flex;
     justify-content: space-between;
