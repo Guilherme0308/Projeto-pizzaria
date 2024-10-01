@@ -1,3 +1,7 @@
+.cardapio-main{
+    margin-top: 128px;
+}
+
 .cardapio {
     display: flex;
     flex-wrap: wrap;
