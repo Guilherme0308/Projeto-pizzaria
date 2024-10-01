@@ -1,4 +1,4 @@
-.fazer-pedido{
+.fazer-pedido {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -8,7 +8,6 @@
 .group-pedido {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
     font-size: 16px;
 }
 
@@ -20,17 +19,15 @@
 }
 
 .info-box {
-    width: 900px;
-    height: flex;
+    width: 600px;
     background-color: #ffca00;
     border-radius: 15px;
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
 }
 
 .pag-box {
-    width: 900px;
-    height: flex;
+    width: 600px;
     background-color: #ffca00;
     border-radius: 15px;
     padding: 20px;
@@ -65,8 +62,7 @@
 }
 
 .car-box {
-    width: 500px;
-    height: flex;
+    width: 300px;
     background-color: #ffca00;
     border-radius: 15px;
     padding: 10px;
@@ -80,8 +76,7 @@
 }
 
 .total-box {
-    width: 500px;
-    height: flex;
+    width: 300px;
     background-color: #ffca00;
     border-radius: 15px;
     padding: 10px;
@@ -95,7 +90,7 @@
     margin: 20px;
 }
 
-.total-box #total{
+.total-box #total {
     font-weight: bold;
     font-size: larger;
     border-top: 1px solid #a30000;
@@ -117,11 +112,44 @@
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.group-pedido button:hover {
     background-color: #718d00;
 }
 
 .img-card {
     width: 50px;
     margin: 5px;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+
+    .group-pedido {
+        flex-direction: column;
+    }
+
+    .car-box,
+    .total-box,
+    .info-box,
+    .pag-box {
+        width: 600px;
+    }
+
+    .group-pedido h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .group-pedido {
+        flex-direction: column;
+    }
+
+    .car-box,
+    .total-box,
+    .info-box,
+    .pag-box {
+        width: 300px;
+    }
 }
