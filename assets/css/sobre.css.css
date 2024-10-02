@@ -1,0 +1,21 @@
+.sobre {
+    justify-content: space-between;
+    margin: 128px;
+
+}
+
+.title-sobre {
+    text-align: center;
+    color: #a30000;
+    font-size: 25px;
+}
+
+.more-info{
+    color: #a30000;
+    font-size: 20px;
+}
+
+.primari-text {
+    font-size: 16px;
+    text-align: justify;
+}
