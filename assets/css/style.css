@@ -1,12 +1,13 @@
 /* Importação de outros estilos */
-@import url(/assets/css/reset.css);
-@import url(/assets/css/responsive.css);
-@import url(/assets/css/login.css);
-@import url(/assets/css/cadastro.css);
-@import url(/assets/css/cardapio.css);
-@import url(/assets/css/profile.css);
-@import url(/assets/css/carrinho.css);
-@import url(/assets/css/fazer_pedido.css);
+@import url(reset.css);
+@import url(responsive.css);
+@import url(login.css);
+@import url(cadastro.css);
+@import url(cardapio.css);
+@import url(profile.css);
+@import url(carrinho.css);
+@import url(fazer_pedido.css);
+@import url(sobre.css);
 
 /* Header (cabeçalho) */
 header {
