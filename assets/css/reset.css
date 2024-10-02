@@ -5,11 +5,14 @@
     font-family: "Fredoka", sans-serif;
     padding: 0;
     box-sizing: border-box;
-}body{
-    background-image: url("/src/img/fundo-pizza2.jpg");
+}
+
+body{
+    background-image: url("fundo-pizza2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 li{
     list-style: none;
 }
