@@ -1,8 +1,12 @@
+.cardapio-main{
+    margin-top: 128px;
+}
+
 .cardapio {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 16px; 
+    gap: 8px; 
     margin: 32px auto;
     max-width: 75% 
 }

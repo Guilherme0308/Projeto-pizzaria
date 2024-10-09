@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 60vh;
-    margin: 0;
+    margin: 128px;
 }
 
 .login-box {
@@ -13,7 +13,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 600px;
-    height: 400px;
+    height: flex;
 }
 
 .login-box h1 {
@@ -48,24 +48,29 @@
 .box-item input {
     padding: 10px;
     font-size: 16px;
-    justify-content:center ;
-    border: 1px solid #ccc;
+    justify-content: center;
+    border: 1px solid #a30000;
     border-radius: 5px;
+    outline: none;
     width: 100%;
 }
 
-button.btn {
-    background-color: orangered;
+.box-item ::placeholder{
+    color: #a30000;
+}
+
+.login-box button {
+    background-color: #a5c135;
     color: #fff;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 100%;
     margin-top: 20px;
 }
 
-button.btn:hover {
+button:hover {
     background-color: #c4de5c;
 }

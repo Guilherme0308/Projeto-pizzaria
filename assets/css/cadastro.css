@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 128px;
 }
 
 .box-cadast {
@@ -45,10 +45,15 @@
     width: 100%;
     background-color: #ffca00;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-color:    #a30000;
-    border-radius: 4px;
+    border: 1px solid #a30000;
+    border-radius: 10px;
     font-size: 14px;
+    outline: none;
+    color: #a30000;
+}
+
+.box-cadast ::placeholder {
+    color: #a30000;
 }
 
 .box-group {
@@ -56,26 +61,18 @@
     gap: 10px;
 }
 
-.box-group input {
-    flex: 1;
-}
-
-.box-pass input {
-    margin-bottom: 10px;
-}
-
-button.btn {
+.box-cadast button {
     width: 100%;
     padding: 12px;
     background-color: #a5c135;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button.btn:hover {
+button:hover {
     background-color: #c4de5c;
 }

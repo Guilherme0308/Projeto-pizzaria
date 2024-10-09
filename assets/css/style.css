@@ -1,12 +1,13 @@
 /* Importação de outros estilos */
-@import url(/assets/css/reset.css);
-@import url(/assets/css/responsive.css);
-@import url(/assets/css/login.css);
-@import url(/assets/css/cadastro.css);
-@import url(/assets/css/cardapio.css);
-@import url(/assets/css/profile.css);
-@import url(/assets/css/carrinho.css);
-@import url(/assets/css/fazer_pedido.css);
+@import url(reset.css);
+@import url(responsive.css);
+@import url(login.css);
+@import url(cadastro.css);
+@import url(cardapio.css);
+@import url(profile.css);
+@import url(carrinho.css);
+@import url(fazer_pedido.css);
+@import url(sobre.css);
 
 /* Header (cabeçalho) */
 header {
@@ -14,7 +15,8 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 16px 20px;
-    background-color: #a30000; /* Cor principal */
+    background-color: #a30000;
+    /* Cor principal */
     position: fixed;
     width: 100%;
     top: 0;
@@ -38,7 +40,8 @@ header {
     padding: 0;
     display: flex;
     align-items: center;
-    gap: 15px; /* Espaçamento entre itens */
+    gap: 15px;
+    /* Espaçamento entre itens */
 }
 
 .nav li {
@@ -231,7 +234,6 @@ header {
     transform: translate(-50%, -50%);
     padding: 16px 32px;
     background-color: #c00000;
-   
     color: #fff;
     border-radius: 25px;
     font-size: 1.5rem;
@@ -240,23 +242,26 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s, transform 0.3s;
     z-index: 2;
+    border: none;
 }
+
 @media (max-width: 768px) {
     .home-banner {
-        height: auto; 
+        height: auto;
     }
-    
+
     .home-banner .logo-banner {
-        width: 8vw; 
-        top: 15%; 
+        width: 8vw;
+        top: 15%;
     }
 
     .banner-button {
-        top: 60%; 
-        font-size: 1rem; 
+        top: 60%;
+        font-size: 1rem;
         padding: 10px 20px;
     }
 }
+
 /* Estilo da seção de pizzas */
 .pizzas {
     display: flex;
