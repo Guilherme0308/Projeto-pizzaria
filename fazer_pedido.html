@@ -107,23 +107,13 @@
                     <div class="car-box">
                         <h1>Carrinho</h1>
 
-                        <ul>
+                        <ul id="preview_produtos">
+                
                             <li>
-                                <spam>Pizza Portuguesa Família</spam>
-                                <spam>1</spam>
+                                <span id="nome_produto"></span>
+                                <span id="quantidade_produto"></span>
                             </li>
-                            <li>
-                                <spam>Pizza Doce Chocolate e Ninho</spam>
-                                <spam>1</spam>
-                            </li>
-                            <li>
-                                <spam>Pepsi 2L</spam>
-                                <spam>1</spam>
-                            </li>
-                            <li>
-                                <spam>Adicional Maionese Verde</spam>
-                                <spam>1</spam>
-                            </li>
+            
                         </ul>
                     </div>
 
@@ -132,16 +122,16 @@
                         <h1>Total</h1>
                         <ul>
                             <li>
-                                <spam>subtotal</spam>
-                                <spam>R$76,98</spam>
+                                <span>subtotal</span>
+                                <span id="valor_produto">R$76,98</span>
                             </li>
                             <li>
-                                <spam>frete</spam>
-                                <spam>grátis</spam>
+                                <span>frete</span>
+                                <span>R$5,00</span>
                             </li>
-                            <li id="total">
-                                <spam>total</spam>
-                                <spam>R$76,98</spam>
+                            <li class="total_total">
+                                <span>total</span>
+                                <span id="total">R$76,98</span>
                             </li>
                         </ul>
                     </div>
@@ -154,5 +144,7 @@
 </body>
 
 <script src="assets/js/script.js"></script>
+<script src="assets/js/carrinho.js"></script>
+<script src="assets/js/checkout.js"></script>
 
 </html>

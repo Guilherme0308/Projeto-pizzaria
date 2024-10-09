@@ -60,7 +60,7 @@
     text-align: center;
 }
 
-#quantidade_produto {
+.quantidade_produto {
     width: 60px;
     padding: 5px;
     font-size: 18px;
