@@ -40,31 +40,37 @@
             <div class="carrinho-container">
 
                 <div class="produto">
-                    <img src="src/img/pizza-5107039_640.jpg" alt="Pizza de Calabresa">
+                    <img id="imagem_produto" src="src/img/pizza-5107039_640.jpg" alt="Pizza de Calabresa">
+
                     <div class="detalhes-produto">
-                        <h3>Pizza de Calabresa</h3>
+                        <h1 id="nome_produto">Produto</h1>
 
                         <label for="quantidade">Quantidade:</label>
                         <input type="number" id="quantidade_produto" value="1" min="1">
 
-                        <p>Preço: R$ 30,00</p>
+                        <p id="valor_produto">Preço: R$ 30,00</p>
 
                     </div>
 
                     <div class="remover-produto">
-                        <button>Remover</button>
+                        <button id="remover">Remover</button>
                     </div>
 
                 </div>
 
                 <div class="total">
-                    <h1>Total: <span id="total_produto"></span></h1>
+                    <h1 id="total_produto"></h1>
                     <button class="finalizar-compra" id="finalizar_compra">Finalizar Compra</button>
                 </div>
 
             </div>
         </section>
     </main>
+
+    
 </body>
+
+<script src="assets/js/script.js"></script>
+<script src="assets/js/carrinho.js"></script>
 
 </html>

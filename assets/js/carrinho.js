@@ -10,7 +10,7 @@
             const quantidade = parseInt(quantidadeInput.value);
             const preco = parseFloat(valorProduto.textContent.replace('Preço: R$', '').replace(',', '.'));
             const total = quantidade * preco;
-            totalProduto.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+            totalProduto.textContent = `Total R$ ${total.toFixed(2).replace('.', ',')}`;
         };
 
         // Evento para atualizar o total quando a quantidade mudar
