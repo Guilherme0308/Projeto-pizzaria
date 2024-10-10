@@ -16,7 +16,6 @@ quantidadeInput.addEventListener('input', function () {
     AtualizarTotal();
 })
 
-
 removerButton.addEventListener('click', function () {
     document.querySelector('.produto').remove();
 
