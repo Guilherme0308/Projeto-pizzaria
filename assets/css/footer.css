@@ -1,0 +1,18 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ 
+}
+footer .logo-footer{
+    width: 50%;
+    margin: 4%;
+}
+footer .footer-info{
+    margin: 8%;
+    
+}
+footer .footer-info h1{
+    font-size: 2rem;
+    color: white;
+}

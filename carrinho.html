@@ -5,25 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xero Pizzaria</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 
 <body>
     <header>
-        <img src="src/img/logo_pizzaria.png" alt="Logo da Pizzaria" class="logo">
+        <img src="/src/img/logo_pizzaria.png" alt="Logo da Pizzaria" class="logo">
 
         <ul class="nav">
 
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cardapio.html">Cardápio</a></li>
-            <li><a href="fazer_pedido.html">Fazer Pedido</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="login.html" class="login">Login</a></li>
-            <li><a href="profile.html" class="profile"><i class="fa fa-user"></i></a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/cardapio.html">Cardápio</a></li>
+            <li><a href="/fazer_pedido.html">Fazer Pedido</a></li>
+            <li><a href="/contatos.html">Contatos</a></li>
+            <li><a href="/sobre.html">Sobre</a></li>
+            <li><a href="/login.html" class="login">Login</a></li>
+            <li><a href="/profile.html" class="profile"><i class="fa fa-user"></i></a></li>
             <li class="cart">
-                <a href="carrinho.html"><i class="fa fa-shopping-cart cart-icon"></i>
-                    <span class="cart-count">3</span></a>
+                <a href="/carrinho.html"><i class="fa fa-shopping-cart cart-icon"></i>
+                    <span class="cart-count"></span></a>
             </li>
             <div class="search-container">
                 <input type="text" placeholder="Pesquisar...">
@@ -32,43 +34,29 @@
         </ul>
         <button class="menu-toggle"><i class="fa fa-bars"></i></button>
     </header>
+
     <main>
         <section>
-            <div class="carrinho-container">
-                <div class="produto">
-                    <img src="src/img/pizzacalabresa.jpg" alt="Pizza de Calabresa">
-                    <div class="detalhes-produto">
-                        <h1>Pizza de Calabresa</h1>
-                        <p>Quantidade: 1</p>
-                        <p>Preço: R$ 30,00</p>
+            <main>
+                <section>
+                    <div class="carrinho-container" id="carrinho-container">
+                        <!-- Dynamic product items will be injected here by JavaScript -->
                     </div>
-                    <div class="remover-produto">
-                        <button>Remover</button>
+        
+                    <div class="total">
+                        <h1>Total: <span id="total_produto">R$ 0,00</span></h1>
+                        <button class="finalizar-compra" id="finalizar_compra">Finalizar Compra</button>
                     </div>
-                </div>
+                </section>
+            </main>
 
-                <div class="produto">
-                    <img src="src/img/pizza_margueritta.jpg" alt="Pizza de Marguerita">
-                    <div class="detalhes-produto">
-                        <h1>Pizza de Marguerita</h1>
-                        <p>Quantidade: 2</p>
-                        <p>Preço: R$ 35,00</p>
-                    </div>
-                    <div class="remover-produto">
-                        <button>Remover</button>
-                    </div>
-                </div>
-
-                <div class="total">
-                    <h1>Total: R$ 100,00</h1>
-                    <button class="finalizar-compra">Finalizar Compra</button>
-                </div>
-            </div>
-        </section>
     </main>
+    
 
 </body>
 
-<script src="assets/js/script.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/cardapio.js"></script>
+<script src="/assets/js/carrinho.js"></script>  
 
 </html>

@@ -1,25 +1,23 @@
-@import url('../css/style.css');
-
+@import url('/assets/css/style.css');
 .container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     width: 75%;
-    margin: 5% auto;
+    margin: 15% auto; 
+    color:#fff;
     border-radius: 25px;
-    padding: 20px;
+    padding: 20px; 
     gap: 2rem;
     padding: 2rem;
-    color: #000000;
-    font-size: 16px;
 }
 
 .list-lateral-profile {
     flex: 1;
-    background-color: rgba(255, 202, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .photo-user {
@@ -28,10 +26,9 @@
     margin-bottom: 1rem;
 }
 
-.container h1,
 h2 {
     margin-bottom: 0.5rem;
-    color: #a30000;
+    color: #fff;
 }
 
 .user-status {
@@ -54,16 +51,14 @@ ul li {
 }
 
 .btn-action {
-    background-color: #a30000;
+    background-color: #ff5722;
+
     border: none;
     padding: 0.75rem;
-    border-radius: 10px;
+    border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
     text-align: center;
-    transition: background-color 0.3s ease;
-    font-size: 15px;
-    color: #ffffff;
 }
 
 .btn-action:hover {
@@ -81,38 +76,37 @@ ul li {
 
 .content-article {
     flex: 3;
-    background-color: rgba(255, 202, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .activity-list {
     margin-bottom: 1rem;
 }
 
-.stats,
-.quick-settings {
+.stats, .quick-settings {
     margin-top: 2rem;
+    
+}
+.quick-settings p{
+    color: #fff;
 }
 
-.stats ul,
-.quick-settings ul {
+.stats ul, .quick-settings ul {
     list-style: none;
 }
 
-.stats li,
-.quick-settings li {
+.stats li, .quick-settings li {
     margin-bottom: 0.5rem;
 }
 
-.stats a,
-.quick-settings a {
-    color: #a30000;
+.stats a, .quick-settings a {
+    color: #ff5722;
     text-decoration: none;
 }
 
-.stats a:hover,
-.quick-settings a:hover {
+.stats a:hover, .quick-settings a:hover {
     text-decoration: underline;
-}
+}   
