@@ -1,13 +1,12 @@
 /* Importação de outros estilos */
-@import url(reset.css);
-@import url(responsive.css);
-@import url(login.css);
-@import url(cadastro.css);
-@import url(cardapio.css);
-@import url(profile.css);
-@import url(carrinho.css);
-@import url(fazer_pedido.css);
-@import url(sobre.css);
+@import url(/assets/css/reset.css);
+@import url(/assets/css/responsive.css);
+@import url(/assets/css/login.css);
+@import url(/assets/css/cadastro.css);
+@import url(/assets/css/cardapio.css);
+@import url(/assets/css/profile.css);
+@import url(/assets/css/carrinho.css);
+@import url(/assets/css/fazer_pedido.css);
 
 /* Header (cabeçalho) */
 header {
@@ -16,7 +15,6 @@ header {
     justify-content: space-between;
     padding: 16px 20px;
     background-color: #a30000;
-    /* Cor principal */
     position: fixed;
     width: 100%;
     top: 0;
@@ -26,7 +24,7 @@ header {
 
 .logo {
     height: 50px;
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease-in-out;
 }
 
 .logo:hover {
@@ -36,12 +34,11 @@ header {
 /* Navegação */
 .nav {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     align-items: center;
     gap: 15px;
-    /* Espaçamento entre itens */
+    padding: 0;
+    margin: 0;
 }
 
 .nav li {
@@ -76,7 +73,7 @@ header {
     top: -8px;
     right: -8px;
     background-color: #e74c3c;
-    color: white;
+    color: #fff;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -100,6 +97,7 @@ header {
     border-radius: 4px;
     font-size: 16px;
     outline: none;
+    transition: border-color 0.3s ease;
 }
 
 .search-container input[type="text"]:focus {
@@ -109,7 +107,7 @@ header {
 .search-container button {
     background-color: #f39c12;
     border: none;
-    color: white;
+    color: #fff;
     padding: 8px 12px;
     margin-left: 5px;
     border-radius: 4px;
@@ -122,21 +120,17 @@ header {
     background-color: #e67e22;
 }
 
-.search-container button i {
-    font-size: 16px;
-}
-
-/*menu-hambuguer */
+/* Menu-hambúrguer */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
-    color: white;
+    color: #fff;
     font-size: 28px;
     cursor: pointer;
 }
 
-/* Responsividade */
+/* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
     .nav {
         flex-direction: column;
@@ -171,7 +165,6 @@ header {
 @media (max-width: 1200px) {
     .nav {
         flex-direction: column;
-        background-color: #a30000;
         position: absolute;
         top: 65px;
         left: -100%;
@@ -193,6 +186,7 @@ header {
 
     .menu-toggle {
         display: block;
+        justify-content: flex-end;
     }
 
     .search-container {
@@ -204,7 +198,7 @@ header {
 .home-banner {
     position: relative;
     text-align: center;
-    color: white;
+    color: #fff;
 }
 
 .home-banner .banner {
@@ -232,6 +226,7 @@ header {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 16%;
     padding: 16px 32px;
     background-color: #c00000;
     color: #fff;
@@ -240,19 +235,24 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     z-index: 2;
-    border: none;
+}
+
+.banner-button:hover {
+    background-color: #a30000;
+    transform: translate(-50%, -50%) scale(1.05);
 }
 
 @media (max-width: 768px) {
     .home-banner {
-        height: auto;
+        height: auto; 
     }
-
+    
     .home-banner .logo-banner {
-        width: 8vw;
-        top: 15%;
+        width: 80%;
+        font-size: 3rem;
+        top: 20%;
     }
 
     .banner-button {

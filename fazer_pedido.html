@@ -7,6 +7,7 @@
     <title>Xero Pizzaria</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 
 <body>
@@ -18,12 +19,13 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="cardapio.html">Cardápio</a></li>
             <li><a href="fazer_pedido.html">Fazer Pedido</a></li>
+            <li><a href="contatos.html">Contatos</a></li>
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="login.html" class="login">Login</a></li>
             <li><a href="profile.html" class="profile"><i class="fa fa-user"></i></a></li>
             <li class="cart">
                 <a href="carrinho.html"><i class="fa fa-shopping-cart cart-icon"></i>
-                    <span class="cart-count">3</span></a>
+                    <span class="cart-count"></span></a>
             </li>
             <div class="search-container">
                 <input type="text" placeholder="Pesquisar...">
@@ -54,17 +56,20 @@
                     <div class="pag-box">
                         <h1>Pagamento</h1>
 
-                        <img class="img-card" src="src/img/visa.svg" />
-                        <img class="img-card" src="src/img/mastercard.svg" />
-                        <img class="img-card" src="src/img/elo.svg" />
+                        <div class="img-card">
+                            <img src="src/img/visa.svg" />
+                            <img src="src/img/mastercard.svg" />
+                            <img src="src/img/elo.svg" />
+                        </div>
 
                         <form>
+
                             <label>Nome Impresso no Cartão</label>
                             <input type="text" placeholder="Nome Impresso no Cartão" request />
                             <label>Número do Cartão</label>
-                            <input type="number" placeholder="Número do Cartão" request />
+                            <input type="text" placeholder="Número do Cartão" request />
                             <label>CVV</label>
-                            <input type="number" placeholder="CVV" request />
+                            <input type="text" placeholder="CVV" request />
 
                             <label>Validade</label>
                             <select>
@@ -93,8 +98,6 @@
                                 <option value="2030">2030</option>
                                 <option value="2031">2031</option>
                             </select>
-
-                            <button type="submit">Finalizar Compra</button>
 
                         </form>
 
@@ -144,6 +147,7 @@
                                 <spam>R$76,98</spam>
                             </li>
                         </ul>
+                        <button>Finalizar Compra</button>
                     </div>
 
                 </div>
