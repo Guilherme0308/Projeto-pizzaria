@@ -58,6 +58,25 @@
 
                 </div>
 
+                <div class="produto">
+                    <img id="imagem_produto" src="src/img/pizza-5107039_640.jpg" alt="Pizza de Calabresa">
+
+                    <div class="detalhes-produto">
+                        <h1 id="nome_produto">Produto</h1>
+
+                        <label for="quantidade">Quantidade:</label>
+                        <input type="number" class="quantidade_produto" id="quantidade_produto" value="1" min="1">
+
+                        <p id="valor_produto">Preço: R$ 30,00</p>
+
+                    </div>
+
+                    <div class="remover-produto">
+                        <button id="remover">Remover</button>
+                    </div>
+
+                </div>
+
                 <div class="total">
                     <h1 id="total_produto"></h1>
                     <button class="finalizar-compra" id="finalizar_compra">Finalizar Compra</button>
@@ -71,7 +90,7 @@
 </body>
 
 <script src="assets/js/script.js"></script>
-<script src="assets/js/carrinho.js"></script>
+<script src="js/carrinho.js"></script>
 <script src="assets/js/checkout.js"></script>
 
 </html>
