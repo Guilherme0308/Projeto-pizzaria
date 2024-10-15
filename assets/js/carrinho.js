@@ -1,36 +1,91 @@
-var quantidadeInput = document.getElementById('quantidade_produto');
-var valorProduto = document.getElementById('valor_produto');
-var totalProduto = document.getElementById('total_produto');
-var removerButton = document.getElementById('remover');
-var finalizarCompraButton = document.getElementById('finalizar_compra');
+document.addEventListener('DOMContentLoaded', () => {
+    const cartContainer = document.getElementById("carrinho-container");
+    const totalProduto = document.getElementById("total_produto");
+    const finalizarCompraButton = document.getElementById("finalizar_compra");
 
-//manipulação de produtos do carrinho
-function AtualizarTotal() {
-    const quantidade = parseInt(quantidadeInput.value);
-    const preco = parseFloat(valorProduto.textContent.replace('Preço: R$', '').replace(',', '.'));
-    const total = quantidade * preco;
-    totalProduto.textContent = `Total R$ ${total.toFixed(2).replace('.', ',')}`;
-}
+    // Function to get cart items from localStorage
+    function getCartItems() {
+        return JSON.parse(localStorage.getItem("cart")) || [];
+    }
 
-quantidadeInput.addEventListener('input', function () {
-    AtualizarTotal();
-})
+    // Function to update the displayed total price
+    function updateTotal() {
+        const cartItems = getCartItems();
+        let total = 0;
 
-removerButton.addEventListener('click', function () {
-    document.querySelector('.produto').remove();
+        cartItems.forEach((item, index) => {
+            const quantityInput = document.querySelector(`.quantidade_produto[data-index="${index}"]`);
+            const quantity = parseInt(quantityInput.value);
+            const price = parseFloat(item.price.replace("R$ ", "").replace(",", "."));
+            total += quantity * price;
+        });
 
-    var produtoId = produto.getAttribute('data-id');
-    carrinho = carrinho.filter(p => p.id !== produtoId); // Filtra o produto removido
-    localStorage.setItem('carrinho-container', JSON.stringify(carrinho)); // Atualiza o localStorage
+        totalProduto.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+    }
+
+    // Function to display cart items
+    function displayCartItems() {
+        const cartItems = getCartItems();
+        cartContainer.innerHTML = ""; // Clear existing items
+
+        // If cart is empty
+        if (cartItems.length === 0) {
+            cartContainer.innerHTML = "<p>Carrinho vazio!</p>";
+            updateTotal();
+            return;
+        }
+
+        // Iterate through each cart item
+        cartItems.forEach((item, index) => {
+            const productDiv = document.createElement("div");
+            productDiv.classList.add("produto");
+            productDiv.innerHTML = `
+                <img src="${item.image}" alt="${item.name}">
+                <div class="detalhes-produto">
+                    <h1>${item.name}</h1>
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" value="1" min="1" class="quantidade_produto" data-index="${index}">
+                    <p class="valor_produto">Preço: ${item.price}</p>
+                </div>
+                <div class="remover-produto">
+                    <button class="remover" data-index="${index}">Remover</button>
+                </div>
+            `;
+            cartContainer.appendChild(productDiv);
+        });
+
+        updateTotal();
+    }
+
+    // Function to remove an item from the cart
+    function removeFromCart(index) {
+        const cartItems = getCartItems();
+        cartItems.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cartItems));
+        displayCartItems();
+    }
+
+    // Event delegation for quantity updates and item removal
+    cartContainer.addEventListener("click", (e) => {
+        if (e.target.classList.contains("remover")) {
+            const index = e.target.getAttribute("data-index");
+            removeFromCart(index);
+        }
+    });
+
+    // Event listener for quantity changes
+    cartContainer.addEventListener("input", (e) => {
+        if (e.target.classList.contains("quantidade_produto")) {
+            updateTotal();
+        }
+    });
+
+    // Event listener for finalizing purchase
+    finalizarCompraButton.addEventListener("click", () => {
+        alert("Compra finalizada com sucesso!"); // Placeholder action
+        // Implement your checkout logic here
+    });
+
+    // Initialize the cart display
+    displayCartItems();
 });
-
-quantidadeInput.addEventListener('input', AtualizarTotal);
-
-finalizarCompraButton.addEventListener('click', function () {
-    alert('Compra finalizada com sucesso!');
-
-    localStorage.removeItem('carrinho-container');
-});
-
-// Inicializa o total
-AtualizarTotal();
