@@ -6,10 +6,13 @@
     $database = "xerodb";
 
     // variável que irá fazer a conexão
-    $conexao = mysqli_connect($host, $user, $password, $database);
+    $conexao = new mysqli($host, $user, $password, $database);
 
     // teste de conexão
     if(!$conexao){
         die("Houve um erro ao conectar. ".mysqli_connect_error());
+    }
+    else{
+        echo "conexão efetuada com sucesso!";
     }
 ?>
