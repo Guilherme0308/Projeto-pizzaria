@@ -1,15 +1,15 @@
 <?php
+    // dados do servidor local
     $host = "localhost";
-    $database = "xerodb";
     $user = "root";
     $password = "";
+    $database = "xerodb";
 
-    $conectar = new conectar($host, $user, $password, $database);
+    // variável que irá fazer a conexão
+    $conexao = mysqli_connect($host, $user, $password, $database);
 
-    if($conectar->connect_errno){
-        echo "falha ao conectar:(" . $conectar->connect_errno . ")" . $conectar->connect_errno;
-    }
-    else{
-        echo "conectado ao banco de dados";
+    // teste de conexão
+    if(!$conexao){
+        die("Houve um erro ao conectar. ".mysqli_connect_error());
     }
 ?>
