@@ -40,43 +40,42 @@
                 <h1>Criar Conta</h1>
                 <p>Já é membro? <a href="login.html">Login</a></p>
 
-                <form method="post" action=" ">
+                <form action="cadastro.php" method="POST">
                     <div class="box-item" id="nome">
-                        <input type="text" placeholder="Nome" request />
+                        <input name="nome" type="text" placeholder="Nome" request />
                     </div>
 
                     <div class="box-item" id="email">
-                        <input type="email" placeholder="E-mail" request />
+                        <input name="email" type="email" placeholder="E-mail" request />
                     </div>
 
                     <div class="box-item" id="telefone">
-                        <input type="number" placeholder="Telefone" request />
+                        <input name="telefone" type="number" placeholder="Telefone" request />
                     </div>
 
                     <div class="box-item" id="pass">
-                        <input type="password" id="pass" placeholder="Senha" request />
-                        <input type="password" id="pass" placeholder="Confirmar Senha" request />
+                        <input name="senha" type="password" id="pass" placeholder="Senha" request />
+                    </div>
+
+                    <div class="box-item" id="endereco">
+                        <input name="endereco" type="text" id="endereco" placeholder="Endereço" request />
                     </div>
 
                     <div class="box-group">
-                        <input type="number" id="cep" placeholder="CEP" request />
-                        <input type="text" id="endereco" placeholder="Endereço" request />
-                        <input type="number" id="numero" placeholder="Número" request />
+                        <input name="cep" type="number" id="cep" placeholder="CEP" request />
+                        <input name="numero" type="number" id="numero" placeholder="Número" request />
                     </div>
 
                     <div class="box-item" id="complemento">
-                        <input type="text" placeholder="Complemento" request />
+                        <input name="complemento" type="text" placeholder="Complemento" />
                     </div>
 
-                    <div class="box-item" id="cidade">
-                        <input type="text" placeholder="Cidade" request />
+                    <div class="box-group" id="cidade">
+                        <input name="cidade" type="text" placeholder="Cidade" request />
+                        <input name="estado" type="text" placeholder="Estado" request />
                     </div>
 
-                    <div class="box-item" id="estado">
-                        <input type="text" placeholder="Estado" request />
-                    </div>
-
-                    <button type="submit" id="btn">Enviar</button>
+                    <button name="submit" type="submit" id="btn">Enviar</button>
 
                 </form>
 

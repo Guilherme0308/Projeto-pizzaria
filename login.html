@@ -39,13 +39,14 @@
             <div class="login-box">
                 <h1>Login</h1>
                 <p>Ainda não é membro? <a href="cadastro.html">Cadastre-se</a></p>
-                <form>
+
+                <form action="login.php" method="POST">
                     <div class="box-item">
-                        <input type="email" placeholder="E-mail" request />
-                        <input type="password" placeholder="password" request />
+                        <input name="email" type="email" placeholder="E-mail" request />
+                        <input name="senha" type="password" placeholder="Senha" request />
                     </div>
 
-                    <button type="submit" class="btn" id="btn">Acessar</button>
+                    <button name="submit" type="submit" id="btn">Acessar</button>
 
                 </form>
 

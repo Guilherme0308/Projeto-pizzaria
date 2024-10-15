@@ -1,0 +1,27 @@
+<?php
+    // !empty não deixa os campos serem nulos
+    if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])){        
+        // importa o arquivo de conexão
+        include_once('connect.php');
+
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+
+        // coloca os campos digitados no banco de dados em sql
+        $sql = "SELECT * FROM usuario WHERE email = '$email' and senha = '$senha' ";
+
+        $resultado = $conexao->query($sql);
+
+        if(mysqli_num_rows($resultado) < 1){
+            header("Location: login.html");
+        }
+        else{
+            header("Location: profile.html");
+        }
+
+    }
+    else{
+        // login errado: volta para a tela de login
+        header('Location: login.html');
+    }
+?>
