@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xero Pizzaria</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 
 <body>
     <header>
-        <img src="/src/img/logo_pizzaria.png" alt="Logo da Pizzaria" class="logo">
+        <img src="src/img/logo_pizzaria.png" alt="Logo da Pizzaria" class="logo">
 
         <ul class="nav">
 
@@ -24,8 +24,8 @@
             <li><a href="login.html" class="login">Login</a></li>
             <li><a href="profile.html" class="profile"><i class="fa fa-user"></i></a></li>
             <li class="cart">
-                <a href="/carrinho.html"><i class="fa fa-shopping-cart cart-icon"></i>
-                    <span class="cart-count"></span></a>
+                <a href="carrinho.html"><i class="fa fa-shopping-cart cart-icon"></i>
+                    <span class="cart-count">3</span></a>
             </li>
             <div class="search-container">
                 <input type="text" placeholder="Pesquisar...">
@@ -46,7 +46,26 @@
                         <h1 id="nome_produto">Produto</h1>
 
                         <label for="quantidade">Quantidade:</label>
-                        <input type="number" id="quantidade_produto" value="1" min="1">
+                        <input type="number" class="quantidade_produto" id="quantidade_produto" value="1" min="1">
+
+                        <p id="valor_produto">Preço: R$ 30,00</p>
+
+                    </div>
+
+                    <div class="remover-produto">
+                        <button id="remover">Remover</button>
+                    </div>
+
+                </div>
+
+                <div class="produto">
+                    <img id="imagem_produto" src="src/img/pizza-5107039_640.jpg" alt="Pizza de Calabresa">
+
+                    <div class="detalhes-produto">
+                        <h1 id="nome_produto">Produto</h1>
+
+                        <label for="quantidade">Quantidade:</label>
+                        <input type="number" class="quantidade_produto" id="quantidade_produto" value="1" min="1">
 
                         <p id="valor_produto">Preço: R$ 30,00</p>
 
@@ -66,12 +85,12 @@
             </div>
         </section>
     </main>
-    
 
     
 </body>
 
 <script src="assets/js/script.js"></script>
-<script src="assets/js/carrinho.js"></script>
+<script src="js/carrinho.js"></script>
+<script src="assets/js/checkout.js"></script>
 
 </html>

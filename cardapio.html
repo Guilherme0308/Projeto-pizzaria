@@ -1,255 +1,247 @@
-    <!DOCTYPE html>
-    <html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Xero Pizzaria</title>
-        <link rel="stylesheet" href="/assets/css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xero Pizzaria</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 
-    </head>
+<body>
+    <!--abaixo tem o header-->
+    <header>
+        <img src="src/img/logo_pizzaria.png" alt="Logo da Pizzaria" class="logo">
+        <!--abaixo tem os links de cada pagina-->
+        <ul class="nav">
 
-    <body>
-        <header>
-            <img src="/src/img/logo_pizzaria.png" alt="Logo da Pizzaria" class="logo">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="fazer_pedido.html">Fazer Pedido</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="login.html" class="login">Login</a></li>
+            <li><a href="profile.html" class="profile"><i class="fa fa-user"></i></a></li>
+            <li class="cart">
+                <a href="carrinho.html"><i class="fa fa-shopping-cart cart-icon"></i>
+                    <span class="cart-count">3</span></a>
+            </li>
+            <div class="search-container">
+                <input type="text" placeholder="Pesquisar...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </ul>
+        <button class="menu-toggle"><i class="fa fa-bars"></i></button>
+    </header>
 
-            <ul class="nav">
+    <main class="cardapio-main">
+        <!--abaixo é a sessão de pizzas salgadas-->
+        <section class="cardapio">
+            <!--abaixo são botões de cada produto-->
+            <div class="card">
+                <img src="src/img/pizzapepperoni.jpg" alt="Pizza de Pepperoni">
+                <h2>Pepperoni</h2>
+                <p>Massa fina com molho de tomate, queijo mozzarella, pepperoni e orégano.</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Pepperoni')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/pizza-5107039_640.jpg" alt="Pizza Margherita">
+                <h2>Margherita</h2>
+                <p>Massa fina com molho de tomate, queijo mozzarella, manjericão e orégano.</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Margherita')">Adicionar ao Carrinho</button>
 
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/cardapio.html">Cardápio</a></li>
-                <li><a href="/fazer_pedido.html">Fazer Pedido</a></li>
-                <li><a href="/contatos.html">Contatos</a></li>
-                <li><a href="/sobre.html">Sobre</a></li>
-                <li><a href="/login.html" class="login">Login</a></li>
-                <li><a href="/profile.html" class="profile"><i class="fa fa-user"></i></a></li>
-                <li class="cart">
-                    <a href="/carrinho.html"><i class="fa fa-shopping-cart cart-icon"></i>
-                        <span class="cart-count"></span></a>
-                </li>
-                <div class="search-container">
-                    <input type="text" placeholder="Pesquisar...">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </div>
-            </ul>
-            <button class="menu-toggle"><i class="fa fa-bars"></i></button>
-        </header>
+            </div>
+            <div class="card">
+                <img src="src/img/pizzabaconcheddar.jpeg" alt="Pizza Bacon e Cheddar">
+                <h2>Bacon e Cheddar</h2>
+                <p>Massa grossa com molho de tomate, bacon e queijo cheddar.</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Bacon e Cheddar')">Adicionar ao
+                    Carrinho</button>
 
+            </div>
+            <div class="card">
+                <img src="src/img/pizzalombocana.jpg" alt="Pizza de Lombo Canadense">
+                <h2>Lombo Canadense</h2>
+                <p>Massa fina com lombo canadense, queijo mozzarella, requeijão cremoso e orégano.</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Lombo Canadense')">Adicionar ao
+                    Carrinho</button>
 
+            </div>
+            <div class="card">
+                <img src="src/img/pizzafrangocatupiry.jpeg" alt="Pizza de Frango com Catupiry">
+                <h2>Frango com Catupiry</h2>
+                <p>Massa grossa frango desfiado, catupiry cremoso e orégano.</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Frango com Catupiry')">Adicionar ao
+                    Carrinho</button>
 
-            <main>
-                <section class="cardapio">
-                    <h2 class="section-title">Pizzas Salgadas</h2>
-                    <br>
-                    <!-- Início dos Cards de Pizzas -->
-                    <div class="card">
-                        <img src="/src/img/pizzapepperoni.jpg" alt="Pizza de Pepperoni">
-                        <h3>Pepperoni</h3>
-                        <p>Massa fina com molho de tomate, queijo mozzarella, pepperoni e orégano.</p>
-                        <p class="price">Preço: R$ 45,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                
-                    <div class="card">
-                        <img src="/src/img/pizza-5107039_640.jpg" alt="Pizza Margherita">
-                        <h3>Margherita</h3>
-                        <p>Massa fina com molho de tomate, queijo mozzarella, manjericão e orégano.</p>
-                        <p class="price">Preço: R$ 40,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                
-                    <div class="card">
-                        <img src="/src/img/pizzabaconcheddar.jpeg" alt="Pizza Bacon e Cheddar">
-                        <h3>Bacon e Cheddar</h3>
-                        <p>Massa grossa com molho de tomate, bacon e queijo cheddar.</p>
-                        <p class="price">Preço: R$ 50,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                
-                    <div class="card">
-                        <img src="/src/img/pizzalombocana.jpg" alt="Pizza de Lombo Canadense">
-                        <h3>Lombo Canadense</h3>
-                        <p>Massa fina com lombo canadense, queijo mozzarella, requeijão cremoso e orégano.</p>
-                        <p class="price">Preço: R$ 55,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                
-                    <div class="card">
-                        <img src="/src/img/pizzafrangocatupiry.jpeg" alt="Pizza de Frango com Catupiry">
-                        <h3>Frango com Catupiry</h3>
-                        <p>Massa grossa frango desfiado, catupiry cremoso e orégano.</p>
-                        <p class="price">Preço: R$ 48,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                
-                    <div class="card">
-                        <img src="/src/img/pizzacalabresa.jpg" alt="Pizza de Calabresa">
-                        <h3>Calabresa Acebolada</h3>
-                        <p>Massa grossa com molho de tomate, queijo mozzarella, calabresa e azeitonas pretas.</p>
-                        <p class="price">Preço: R$ 47,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                
-                    <div class="card">
-                        <img src="/src/img/pizzamuçarelabuf.jpg" alt="Pizza de Muçarela de Búfala">
-                        <h3>Muçarela de Búfala</h3>
-                        <p>Massa fina com molho de tomate, mozzarella de búfala, tomates cozidos e orégano.</p>
-                        <p class="price">Preço: R$ 52,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                
-                    <div class="card">
-                        <img src="/src/img/pizzaquatroqueijos.jpeg" alt="Pizza de Quatro Queijos">
-                        <h3>Quatro Queijos</h3>
-                        <p>Massa fina com molho de tomate, queijos mozzarella, parmesão, gorgonzola e provolone.</p>
-                        <p class="price">Preço: R$ 55,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <!-- Fim dos Cards de Pizzas -->
-                </section>
-                
-                <section class="cardapio">
-                    <h2 class="section-title">Bebidas Comuns</h2>
-                    <div class="card">
-                        <img src="src/img/pizzadocebananaecanela.png" alt="Pizza Banana com Açúcar e Canela">
-                        <h2>Banana com Canela</h2>
-                        <p>Massa fina com queijo muçarela sem sal, banana frita com açúcar e canela.</p>
-                        <p>Preço: R$ 35,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="card">
-                        <img src="src/img/pizzadocechocolatecommorango.png" alt="Pizza Chocolate com Morango">
-                        <h2>Chocolate e Morango</h2>
-                        <p>Massa grossa com queijo muçarela sem sal, chocolate ao leite, morangos cortados e granulado.</p>
-                        <p>Preço: R$ 38,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="card">
-                        <img src="src/img/pizzadocechocolatebranco.png" alt="Pizza Chocolate Branco">
-                        <h2>Chocolate Branco</h2>
-                        <p>Massa fina com muçarela sem sal, chocolate branco ao leite temperado com uma pitada de sal.</p>
-                        <p>Preço: R$ 40,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="card">
-                        <img src="src/img/pizzadocechocolatemisto.png" alt="Pizza Chocolate Misto">
-                        <h2>Chocolate Misto</h2>
-                        <p>Massa fina com muçarela sem sal, chocolate branco e preto temperados e em formato lindo.</p>
-                        <p>Preço: R$ 42,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                </section>
-                
-                <section class="cardapio">
-                    <h2>Bebidas Comuns</h2>
-                    <div class="card">
-                        <img src="src/img/bebidascomunscocacola.png" alt="Coca Cola">
-                        <h2>Coca Cola Latinha</h2>
-                        <p>Coca Cola Zero ou comum em lata de 350ml.</p>
-                        <p>Preço: R$ 5,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="card">
-                        <img src="src/img/bebidascomunspepsicola.png" alt="Pepsi Cola">
-                        <h2>Pepsi Cola Latinha</h2>
-                        <p>Pepsi Black, comum ou twist em lata de 350ml.</p>
-                        <p>Preço: R$ 5,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="card">
-                        <img src="src/img/bebidasmomunsfanta.png" alt="Fanta">
-                        <h2>Fanta Latinha</h2>
-                        <p>Fanta Laranja, Uva ou Maracujá em lata de 350ml.</p>
-                        <p>Preço: R$ 5,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="card">
-                        <img src="src/img/bebidascomunsguaranaantartica.png" alt="Guaraná Antártica">
-                        <h2>Guaraná Antártica</h2>
-                        <p>Guaraná Antártica Zero ou comum em lata de 350ml.</p>
-                        <p>Preço: R$ 5,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="card">
-                        <img src="src/img/bebidascomunsaguatonica.png" alt="Água Tônica">
-                        <h2>Água Tônica Latinha</h2>
-                        <p>Água Tônica em lata de 350ml.</p>
-                        <p>Preço: R$ 5,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="card">
-                        <img src="src/img/bebidascomunsdelvalle.png" alt="Del Valle">
-                        <h2>Del Valle Latinha</h2>
-                        <p>Suco Del Valle em lata de 350ml.</p>
-                        <p>Preço: R$ 6,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="card">
-                        <img src="src/img/bebidascomunsagua.png" alt="Água">
-                        <h2>Garrafa de Água</h2>
-                        <p>Garrafinha de água com ou sem gás 500ml.</p>
-                        <p>Preço: R$ 4,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="card">
-                        <img src="src/img/bebidascomunsh2oh.png" alt="H2OH">
-                        <h2>H2OH Garrafa</h2>
-                        <p>H2OH limoneto ou comum em garrafinha de 500ml.</p>
-                        <p>Preço: R$ 5,50</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                </section>
+            </div>
+            <div class="card">
+                <img src="src/img/pizzacalabresa.jpg" alt="Pizza de Calabresa">
+                <h2>Calabresa Acebolada</h2>
+                <p>Massa grossa com molho de tomate, queijo mozzarella, calabresa e azeitonas pretas.</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Calabresa')">Adicionar ao Carrinho</button>
 
-                <section class="cardapio">
-                    <h2>Bebidas Alcoólicas</h2>
-                    <div class="card">
-                        <img src="src/img/bebidaalcoolantartica.png" alt="Antartica">
-                        <h2>Cerveja Antartica</h2>
-                        <p>Cerveja Antartica em lata.</p>
-                        <p>Preço: R$ 5,50</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="card">
-                        <img src="src/img/bebidaalcoolbrahma.png" alt="Brahma">
-                        <h2>Cerveja Brahma</h2>
-                        <p>Cerveja Brahma em lata.</p>
-                        <p>Preço: R$ 5,50</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="card">
-                        <img src="src/img/bebidaalcoolheineken.png" alt="Heineken">
-                        <h2>Cerveja Heineken</h2>
-                        <p>Cerveja Heineken em lata.</p>
-                        <p>Preço: R$ 7,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="card">
-                        <img src="src/img/bebidaalcoolskol.png" alt="Skol">
-                        <h2>Cerveja Skol</h2>
-                        <p>Cerveja Skol em lata.</p>
-                        <p>Preço: R$ 5,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="card">
-                        <img src="src/img/bebidaalcoolimperio.png" alt="Imperio">
-                        <h2>Cerveja Imperio</h2>
-                        <p>Cerveja Imperio em lata.</p>
-                        <p>Preço: R$ 6,00</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="card">
-                        <img src="src/img/bebidaalcoolitaipava.png" alt="Itaipava">
-                        <h2>Cerveja Itaipava</h2>
-                        <p>Cerveja Itaipava em lata.</p>
-                        <p>Preço: R$ 4,50</p>
-                        <button class="card-button">Adicionar ao Carrinho</button>
-                    </div>
-                </section>
-                
-            </main>
-    </body>
+            </div>
+            <div class="card">
+                <img src="src/img/pizzamuçarelabuf.jpg" alt="Pizza de Muçarela de Búfala">
+                <h2>Muçarela de Búfala</h2>
+                <p>Massa fina com molho de tomate, mozzarella de búfala, tomates cozidos e orégano.</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Muçarela de Búfala')">Adicionar ao
+                    Carrinho</button>
 
-    <script src="/assets/js/script.js"></script>
-    <script src="/assets/js/cardapio.js"></script>
-    <script src="/assets/js/carrinho.js"></script>
-    </html>
+            </div>
+            <div class="card">
+                <img src="src/img/pizzaquatroqueijos.jpeg" alt="Pizza de Quatro Queijos">
+                <h2>Quatro Queijos</h2>
+                <p>Massa fina com molho de tomate, queijos mozzarela, parmesão, gorgonzola e provolone.</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Quatro Queijos')">Adicionar ao
+                    Carrinho</button>
+            </div>
+            <!--abaixo é a sessão de pizzas doce-->
+        </section>
+        
+        <section class="cardapio">
+            <!--abaixo são botões de cada produto-->
+            <div class="card">
+                <img src="src/img/pizzadocebananaecanela.png" alt="Pizza Banana com Açucar Canela">
+                <h2>Banana com Canela</h2>
+                <p>Massa fina com queijo muçarela sem sal, banana frita com açúcar e canela.</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Banana com Canela')">Adicionar ao
+                    Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/pizzadocechocolatecommorango.png" alt="Pizza Chocolate com Morango">
+                <h2>Chocolate e Morango</h2>
+                <p>Massa grossa com queijo muçarela sem sal, chocolate ao leite, morangos cortados e granulado.</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Chocolate e Morango')">Adicionar ao
+                    Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/pizzadocechocolatebranco.png" alt="Pizza Chocolate Branco">
+                <h2>Chocolate Branco</h2>
+                <p>Massa fina com muçarela sem sal, chocolate branco ao leite temperado com uma pitada de sal.</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Chocolate Branco')">Adicionar ao
+                    Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/pizzadocechocolatemisto.png" alt="Pizza Chocolate misto">
+                <h2>Chocolate Misto</h2>
+                <p>Massa fina com muçarela sem sal, chocolate branco e preto temperados e em formato lindo.</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Chocolate Misto')">Adicionar ao
+                    Carrinho</button>
+            </div>
+
+        </section>
+
+        <section class="cardapio">
+            <!--abaixo é a sessão de bebidas não acoólicas-->
+
+            <!--abaixo são botões de cada produto-->
+            <div class="card">
+                <img src="src/img/bebidascomunscocacola.png" alt="coca cola">
+                <h2>Coca Cola Latinha</h2>
+                <p>coca cola zero ou comum em lata de 350ml</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Coca Cola Latinha')">Adicionar ao
+                    Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/bebidascomunspepsicola.png" alt="pepsi cola">
+                <h2>Pepsi Cola Latinha</h2>
+                <p>pepsi black, comum ou twist em lata de 350ml</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Pepsi Cola Latinha')">Adicionar ao
+                    Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/bebidasmomunsfanta.png" alt="fanta">
+                <h2>Fanta Latinha</h2>
+                <p>fanta laranja, uva ou maracujá em lata de 350ml</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Fanta Latinha')">Adicionar ao
+                    Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/bebidascomunsguaranaantartica.png" alt="guaraná antartica">
+                <h2>Guaraná Antartica</h2>
+                <p>guaraná antartica zero ou comum em lata de 350ml</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Guaraná Antartica')">Adicionar ao
+                    Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/bebidascomunsaguatonica.png" alt="agua tonica">
+                <h2>Agua Tônica Latinha</h2>
+                <p>agua tônica em lata de 350ml</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Agua Tônica Latinha')">Adicionar ao
+                    Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/bebidascomunsdelvalle.png" alt="del valle">
+                <h2>Del Valle Latinha</h2>
+                <p>suco del valle em lata de 350ml</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Del Valle Latinha')">Adicionar ao
+                    Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/bebidascomunsagua.png" alt="agua">
+                <h2>Garrafa de Agua</h2>
+                <p>garrafinha de agua com ou sem gás 500ml</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Garrafa de Agua')">Adicionar ao
+                    Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/bebidascomunsh2oh.png" alt="H2OH">
+                <h2>H2OH Garrafa</h2>
+                <p>H2OH limoneto ou comum em garrafinha de 500ml</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('H2OH Garrafa')">Adicionar ao Carrinho</button>
+            </div>
+            <!--abaixo é a sessão de bebidas acoólicas-->
+        </section>
+
+        <section class="cardapio">
+            <!--abaixo são botões de cada produto-->
+            <div class="card">
+                <img src="src/img/bebidaalcoolantartica.png" alt="antartica">
+                <h2>Cerveja Antartica</h2>
+                <p>cerveja antartica em lata</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Cerveja Antartica')">Adicionar ao
+                    Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/bebidaalcoolbrahma.png" alt="brahma">
+                <h2>Cerveja Brahma</h2>
+                <p>cerveja brahma em lata</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Cerveja Brahma')">Adicionar ao
+                    Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/bebidaalcoolheineken.png" alt="heineken">
+                <h2>Cerveja Heineken</h2>
+                <p>cerveja heineken em lata</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Cerveja Heineken')">Adicionar ao
+                    Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/bebidaalcoolskol.png" alt="skol">
+                <h2>Cerveja Skol</h2>
+                <p>cerveja skol em lata</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Cerveja Skol')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/bebidaalcoolimperio.png" alt="imperio">
+                <h2>Cerveja Imperio</h2>
+                <p>cerveja imperio em lata</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Cerveja Imperio')">Adicionar ao
+                    Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="src/img/bebidaalcoolitaipava.png" alt="itaipava">
+                <h2>Cerveja Itaipava</h2>
+                <p>cerveja itaipava em lata</p>
+                <button class="card-button" onclick="adicionarAoCarrinho('Cerveja Itaipava')">Adicionar ao
+                    Carrinho</button>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script src="assets/js/script.js"></script>
+
+</html>
