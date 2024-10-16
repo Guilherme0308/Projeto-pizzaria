@@ -70,7 +70,10 @@ function updateQuant() {
 
 // Array com os caminhos para as suas imagens de banner
 const bannerImages = [
-            
+    'src/img/home-banner1.jpg',
+    'src/img/home-banner2.jpg',
+    'src/img/home-banner3.jpg',
+    'src/img/home-banner4.jpg'          
 ];
 
 // Função para mudar a imagem do banner
