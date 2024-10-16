@@ -1,9 +1,10 @@
 <?php
+
     // !empty não deixa os campos serem nulos
     if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])){        
         // importa o arquivo de conexão
-        include_once('connect.php');
-
+        require($_SERVER)
+        
         $email = $_POST['email'];
         $senha = $_POST['senha'];
 
@@ -25,3 +26,27 @@
         header('Location: login.html');
     }
 ?>
+
+<body>
+    <main>
+        <section class="logi">
+
+
+            <div class="login-box">
+                <h1>Login</h1>
+                <p>Ainda não é membro? <a href="cadastro.html">Cadastre-se</a></p>
+
+                <form action="login.php" method="POST">
+                    <div class="box-item">
+                        <input name="email" type="email" placeholder="E-mail" request />
+                        <input name="senha" type="password" placeholder="Senha" request />
+                    </div>
+
+                    <button name="submit" type="submit" id="btn">Acessar</button>
+
+                </form>
+
+            </div>
+        </section>
+    </main>
+</body>

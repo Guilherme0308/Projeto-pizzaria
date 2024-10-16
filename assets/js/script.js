@@ -70,14 +70,12 @@ function updateQuant() {
 
 // Array com os caminhos para as suas imagens de banner
 const bannerImages = [
-    'src/img/banner1_home.jpg',
-    'src/img/banner1_home.jpg',
-        
+            
 ];
 
 // Função para mudar a imagem do banner
 function changeBannerImage() {
-    const banner = document.querySelector('.home-banner');
+    const banner = document.querySelector('.banner');
     const randomImage = bannerImages[Math.floor(Math.random() * bannerImages.length)];
     banner.style.backgroundImage = `url(${randomImage})`;
 }
