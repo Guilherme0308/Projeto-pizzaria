@@ -67,3 +67,20 @@ function updateQuant() {
 
     document.querySelector('#total_produto').innerText = 'Total: R$ ' + totalCart.toFixed(2).replace('.', ',');
 }
+
+// Array com os caminhos para as suas imagens de banner
+const bannerImages = [
+    'src/img/banner1_home.jpg',
+    'src/img/banner1_home.jpg',
+        
+];
+
+// Função para mudar a imagem do banner
+function changeBannerImage() {
+    const banner = document.querySelector('.home-banner');
+    const randomImage = bannerImages[Math.floor(Math.random() * bannerImages.length)];
+    banner.style.backgroundImage = `url(${randomImage})`;
+}
+
+// Mudar a imagem do banner ao carregar a página
+window.onload = changeBannerImage;
