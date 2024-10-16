@@ -12,7 +12,6 @@
     if(!$conexao){
         die("Houve um erro ao conectar. ".mysqli_connect_error());
     }
-    else{
-        echo "conexão efetuada com sucesso!";
+    else{        echo "conexão efetuada com sucesso!";
     }
 ?>
