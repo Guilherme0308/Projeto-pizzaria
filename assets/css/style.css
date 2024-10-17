@@ -8,23 +8,34 @@
 @import url(/assets/css/carrinho.css);
 @import url(/assets/css/fazer_pedido.css);
 
+
+:root {
+    --primary-color: #a30000;
+    --secondary-color: #f39c12;
+    --hover-color: #e67e22;
+    --font-color: #fff;
+    --cart-badge-color: #e74c3c;
+    --header-shadow: rgba(0, 0, 0, 0.1);
+    --transition-time: 0.3s;
+}
+
 /* Header (cabeçalho) */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 16px 20px;
-    background-color: #a30000;
+    background-color: var(--primary-color);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 99;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px var(--header-shadow);
 }
 
 .logo {
     height: 50px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform var(--transition-time) ease-in-out;
 }
 
 .logo:hover {
@@ -47,15 +58,15 @@ header {
 
 .nav a {
     text-decoration: none;
-    color: #fff;
+    color: var(--font-color);
     font-weight: bold;
     font-size: 16px;
     padding: 10px 15px;
-    transition: color 0.3s ease;
+    transition: color var(--transition-time) ease;
 }
 
 .nav a:hover {
-    color: #f39c12;
+    color: var(--secondary-color);
 }
 
 /* Ícone do carrinho */
@@ -65,15 +76,15 @@ header {
 
 .nav .cart .cart-icon {
     font-size: 24px;
-    color: #fff;
+    color: var(--font-color);
 }
 
 .nav .cart .cart-count {
     position: absolute;
     top: -8px;
     right: -8px;
-    background-color: #e74c3c;
-    color: #fff;
+    background-color: var(--cart-badge-color);
+    color: var(--font-color);
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -97,27 +108,27 @@ header {
     border-radius: 4px;
     font-size: 16px;
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: border-color var(--transition-time) ease;
 }
 
 .search-container input[type="text"]:focus {
-    border-color: #f39c12;
+    border-color: var(--secondary-color);
 }
 
 .search-container button {
-    background-color: #f39c12;
+    background-color: var(--secondary-color);
     border: none;
-    color: #fff;
+    color: var(--font-color);
     padding: 8px 12px;
     margin-left: 5px;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color var(--transition-time) ease;
 }
 
 .search-container button:hover {
-    background-color: #e67e22;
+    background-color: var(--hover-color);
 }
 
 /* Menu-hambúrguer */
@@ -125,51 +136,21 @@ header {
     display: none;
     background: none;
     border: none;
-    color: #fff;
+    color: var(--font-color);
     font-size: 28px;
     cursor: pointer;
 }
 
 /* Responsividade para dispositivos móveis */
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        background-color: #a30000;
-        position: absolute;
-        top: 65px;
-        left: -100%;
-        width: 100%;
-        transition: left 0.3s ease;
-        padding-bottom: 20px;
-    }
-
-    .nav.active {
-        left: 0;
-    }
-
-    .nav a {
-        padding: 10px 0;
-        text-align: center;
-        width: 100%;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .search-container {
-        display: none;
-    }
-}
-
 @media (max-width: 1200px) {
     .nav {
         flex-direction: column;
+        background-color: var(--primary-color);
         position: absolute;
         top: 65px;
         left: -100%;
         width: 100%;
-        transition: left 0.3s ease;
+        transition: left var(--transition-time) ease;
         padding-bottom: 20px;
     }
 
@@ -186,7 +167,7 @@ header {
 
     .menu-toggle {
         display: block;
-        justify-content: flex-end;
+        align-self: flex-end;
     }
 
     .search-container {
@@ -246,9 +227,9 @@ header {
 
 @media (max-width: 768px) {
     .home-banner {
-        height: auto; 
+        height: auto;
     }
-    
+
     .home-banner .logo-banner {
         width: 80%;
         font-size: 3rem;
@@ -262,33 +243,32 @@ header {
     }
 }
 
-/* Estilo da seção de pizzas */
-.pizzas {
+.pizzas-content {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: center;
     padding: 20px;
+    gap: 20px;
 }
 
 .pizza-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    width: 300px;
+    background-color: #c00000;
+    color: white;
+    width: 256px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    transition: box-shadow 0.3s ease;
 }
 
-.pizza-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.pizza-card img {
+.pizza-image {
     width: 100%;
     height: auto;
-    border-bottom: 1px solid #ddd;
+    padding: 12px;
 }
 
 .pizza-info {
@@ -296,28 +276,27 @@ header {
 }
 
 .pizza-info h2 {
-    margin: 0;
-    font-size: 18px;
-    color: #333;
+    margin: 10px 0;
+    font-size: 1.5em;
 }
 
 .pizza-info p {
-    margin: 5px 0;
-    font-size: 16px;
-    color: #555;
+    margin: 10px 0;
+    font-size: 1em;
 }
 
 .order-button {
-    background-color: #f39c12;
-    border: none;
+    background-color: #32CD32;
     color: white;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 4px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
+    margin-top: auto;
     transition: background-color 0.3s ease;
 }
 
 .order-button:hover {
-    background-color: #e67e22;
+    background-color: #28a745;
 }
+     
