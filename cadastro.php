@@ -74,7 +74,7 @@ if (isset($_POST['submit'])) {
 
                     <div class="box-item" id="pass">
                         <input name="senha" type="password" id="pass" placeholder="Senha" required />
-                        <input name="confirmarSenha" type="password" id="pass" placeholder="Confirmar Senha" required />
+                        <input name="confirmarSenha" type="password" id="pass" placeholder="Senha" required />
                     </div>
 
                     <div class="box-item" id="endereco">

@@ -1,12 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Tempo de geração: 15/10/2024 às 17:41
--- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.2.12
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -17,15 +8,18 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Banco de dados: `xerodb`
---
+CREATE DATABASE xerodb;
 
--- --------------------------------------------------------
+USE xerodb;
 
---
--- Estrutura para tabela `produtos`
---
+CREATE TABLE `cartao` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `numero` int(11) NOT NULL,
+  `cvv` int(11) NOT NULL,
+  `validade_mes` int(11) NOT NULL,
+  `validade_ano` year(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE `produtos` (
   `id` int(11) NOT NULL,
@@ -34,12 +28,6 @@ CREATE TABLE `produtos` (
   `categoria` varchar(255) NOT NULL,
   `descricao` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `usuario`
---
 
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
@@ -55,44 +43,26 @@ CREATE TABLE `usuario` (
   `senha` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Despejando dados para a tabela `usuario`
---
-
 INSERT INTO `usuario` (`id`, `nome`, `email`, `telefone`, `cep`, `endereco`, `numero`, `complemento`, `cidade`, `estado`, `senha`) VALUES
 (1, 'Hedwig Eva Maria Kiesler', 'xero@email.com', '(21) 3514-1040', '23087-283', 'Estrada do Mendanha', '555', 'Centro comercial', 'Rio de Janeiro', 'RJ', '123456789');
 
---
--- Índices para tabelas despejadas
---
+ALTER TABLE `cartao`
+  ADD PRIMARY KEY (`id`);
 
---
--- Índices de tabela `produtos`
---
 ALTER TABLE `produtos`
   ADD PRIMARY KEY (`id`);
 
---
--- Índices de tabela `usuario`
---
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id`,`senha`);
 
---
--- AUTO_INCREMENT para tabelas despejadas
---
+ALTER TABLE `cartao`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT de tabela `produtos`
---
 ALTER TABLE `produtos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT de tabela `usuario`
---
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
