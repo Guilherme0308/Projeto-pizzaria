@@ -1,30 +1,40 @@
 <?php
+if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])) {
+    // Importa o arquivo de conexão
+    require($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
 
-    // !empty não deixa os campos serem nulos
-    if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])){        
-        // importa o arquivo de conexão
-        require($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
-        
-        $email = $_POST['email'];
-        $senha = $_POST['senha'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
 
-        // coloca os campos digitados no banco de dados em sql
-        $sql = "SELECT * FROM usuario WHERE email = '$email' and senha = '$senha' ";
+    // Prepara a consulta SQL para evitar injeção de SQL
+    $stmt = $conexao->prepare("SELECT senha FROM usuario WHERE email = ?");
+    $stmt->bind_param("s", $email); // 's' significa que é uma string
+    $stmt->execute();
+    $resultado = $stmt->get_result();
 
-        $resultado = $conexao->query($sql);
+    if ($resultado->num_rows < 1) {
+        // Se não houver resultados, redireciona para a página de login
+        header("Location: login.php?error=1"); // Adiciona um parâmetro de erro à URL
+        exit();
+    } else {
+        $row = $resultado->fetch_assoc();
+        $senhaHash = $row['senha'];
 
-        if(mysqli_num_rows($resultado) < 1){
-            header("Location: login.php");
-        }
-        else{
+        // Verifica se a senha digitada corresponde à senha hash armazenada
+        if (password_verify($senha, $senhaHash)) {
+            // Senha correta, redireciona para a página do perfil
             header("Location: profile.html");
+            exit;
+        } else {
+            // Senha incorreta
+            header("Location: login.php?error=2"); // Adiciona um parâmetro de erro à URL
+            exit;
         }
+    }
 
-    }
-    else{
-        // login errado: volta para a tela de login
-        header('Location: login.php');
-    }
+    $stmt->close(); // Fecha a declaração
+    $conexao->close(); // Fecha a conexão
+} 
 ?>
 
 <head>
@@ -45,8 +55,8 @@
 
                 <form action="login.php" method="POST">
                     <div class="box-item">
-                        <input name="email" type="email" placeholder="E-mail" request />
-                        <input name="senha" type="password" placeholder="Senha" request />
+                        <input name="email" type="email" placeholder="E-mail" required />
+                        <input name="senha" type="password" placeholder="Senha" required />
                     </div>
 
                     <button name="submit" type="submit" id="btn">Acessar</button>
