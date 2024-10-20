@@ -58,17 +58,21 @@
                         <img class="img-card" src="src/img/mastercard.svg" />
                         <img class="img-card" src="src/img/elo.svg" />
 
-                        <form>
+                        <form id="form-cartao">
                             <label>Nome Impresso no Cartão</label>
-                            <input type="text" placeholder="Nome Impresso no Cartão" request />
+                            <input type="text" placeholder="Nome Impresso no Cartão" required />
+
                             <label>Número do Cartão</label>
-                            <input type="number" placeholder="Número do Cartão" request />
+                            <input class="cartao-required" id="numero" type="text" placeholder="Número do Cartão" required />
+                            <span class="span-required"></span>
+                            
                             <label>CVV</label>
-                            <input type="number" placeholder="CVV" request />
+                            <input class="cartao-required" id="cvv" type="text" placeholder="CVV" required />
+                            <span class="span-required"></span>
 
                             <label>Validade</label>
-                            <select>
-                                <option value="Mês">Mês</option>
+                            <select id="mes-validade" required>
+                                <option value="">Mês</option>
                                 <option value="Jan">Jan</option>
                                 <option value="Fev">Fev</option>
                                 <option value="Mar">Mar</option>
@@ -83,8 +87,8 @@
                                 <option value="Dez">Dez</option>
                             </select>
 
-                            <select>
-                                <option value="Ano">Ano</option>
+                            <select id="ano-validade" required>
+                                <option value="">Ano</option>
                                 <option value="2025">2025</option>
                                 <option value="2026">2026</option>
                                 <option value="2027">2027</option>
@@ -94,7 +98,7 @@
                                 <option value="2031">2031</option>
                             </select>
 
-                            <button type="submit">Finalizar Compra</button>
+                            <button id="cartaoBtn" type="submit">Finalizar Compra</button>
 
                         </form>
 
