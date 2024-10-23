@@ -1,13 +1,13 @@
 <?php
 if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])) {
-    // Importa o arquivo de conexão
-    require($_SERVER['DOCUMENT_ROOT'] . './_config.php');
+    // Inclui o arquivo de configuração global do aplicativo:
+    require($_SERVER['DOCUMENT_ROOT'] . '/Projeto-pizzaria/_config.php');
 
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
     // Prepara a consulta SQL para evitar injeção de SQL
-    $stmt = $conexao->prepare("SELECT senha FROM usuario WHERE email = ?");
+    $stmt = $conn->prepare("SELECT senha FROM usuario WHERE email = ?");
     $stmt->bind_param("s", $email); // 's' significa que é uma string
     $stmt->execute();
     $resultado = $stmt->get_result();
@@ -23,7 +23,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
         // Verifica se a senha digitada corresponde à senha hash armazenada
         if (password_verify($senha, $senhaHash)) {
             // Senha correta, redireciona para a página do perfil
-            header("Location: profile.html");
+            header("Location: /Projeto-pizzaria/profile.html");
             exit;
         } else {
             // Senha incorreta
@@ -33,7 +33,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
     }
 
     $stmt->close(); // Fecha a declaração
-    $conexao->close(); // Fecha a conexão
+    $conn->close(); // Fecha a conexão
 }
 
 require($_SERVER['DOCUMENT_ROOT'] . '/Projeto-pizzaria/_header.php'); 

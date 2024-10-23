@@ -2,7 +2,7 @@
 $page_article .= <<<HTML
 <section class="sobre">
     <div>
-        <h1 class="title-sobre"> Sobre Nossa Xerô Pizzaria </h1>
+        <h1 class="title-sobre"> Sobre Nossa Xêro Pizzaria </h1>
 
         <p class="primari-text">
             Inauguramos uma unidade no Rio de Janeiro, no bairro Campo Grande. Investimos em tecnologia e delivery

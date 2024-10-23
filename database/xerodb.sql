@@ -72,8 +72,7 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `usuario` (`id`, `nome`, `email`, `telefone`, `cep`, `endereco`, `numero`, `complemento`, `cidade`, `estado`, `senha`) VALUES
-(1, 'Hedwig Eva Maria Kiesler', 'xero@email.com', '(21) 3514-1040', '23087-283', 'Estrada do Mendanha', '555', 'Centro comercial', 'Rio de Janeiro', 'RJ', '123456789');
-
+(1, 'Hedwig Eva Maria Kiesler', 'xero@email.com', '40028922', '23087283', 'Estrada do Mendanha - Campo Grande', '555', 'Centro comercial', 'Rio de Janeiro', 'RJ', '$2y$10$nbpu5AFGRiriK621zEL38epGn2Q2OwgHw7EztMyfaNtUXZ.nlOl22');
 ALTER TABLE `cartao`
   ADD PRIMARY KEY (`id`);
 
@@ -81,7 +80,7 @@ ALTER TABLE `produtos`
   ADD PRIMARY KEY (`id`);
 
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id`,`senha`);
+  ADD PRIMARY KEY (`id`);
 
 ALTER TABLE `cartao`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;

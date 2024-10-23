@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['submit'])) {
-    require($_SERVER['DOCUMENT_ROOT'] . './_config.php');
-
+    // Inclui o arquivo de configuração global do aplicativo:
+    require($_SERVER['DOCUMENT_ROOT'] . '/Projeto-pizzaria/_config.php');
     // Captura os valores dos campos do formulário
     $nome = $_POST['nome'];
     $email = $_POST['email'];
@@ -17,12 +17,12 @@ if (isset($_POST['submit'])) {
 
     // Verifica se as senhas correspondem
     if ($senha !== $confirmarSenha) {
-        echo "As senhas não correspondem.";
+        echo "As senhas não correspondem";
         exit; // Para a execução do script
     }
 
     // Prepara a consulta SQL para evitar injeção de SQL
-    $stmt = $conexao->prepare("INSERT INTO usuario (nome, email, telefone, cep, endereco, numero, complemento, cidade, estado, senha) 
+    $stmt = $conn->prepare("INSERT INTO usuario (nome, email, telefone, cep, endereco, numero, complemento, cidade, estado, senha) 
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     
     // Hash da senha antes de armazenar
@@ -40,19 +40,12 @@ if (isset($_POST['submit'])) {
     }
 
     $stmt->close(); // Fecha a declaração
-    $conexao->close(); // Fecha a conexão
+    $conn->close(); // Fecha a conexão
 }
 
 require($_SERVER['DOCUMENT_ROOT'] . '/Projeto-pizzaria/_header.php');
 ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xero Pizzaria</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
 <body>
     <main>
         <section class="cadast">
@@ -61,7 +54,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/Projeto-pizzaria/_header.php');
                 <h1>Criar Conta</h1>
                 <p>Já é membro? <a href="login.php">Login</a></p>
 
-                <form action="cadastro.php" method="POST">
+                <form id='form-cadastro' action="cadastro.php" method="POST">
                     <div class="box-item" id="nome">
                         <input name="nome" type="text" placeholder="Nome" required />
                     </div>
@@ -75,8 +68,13 @@ require($_SERVER['DOCUMENT_ROOT'] . '/Projeto-pizzaria/_header.php');
                     </div>
 
                     <div class="box-item" id="pass">
-                        <input name="senha" type="password" id="pass" placeholder="Senha" required />
-                        <input name="confirmarSenha" type="password" id="pass" placeholder="Senha" required />
+                        <input name="senha" type="password" id="senha" placeholder="Senha" required />                        
+                    </div>
+                    
+                    <span class='span-validador'></span>
+
+                    <div class="box-item" id="pass">
+                        <input name="confirmarSenha" type="password" id="confirmarSenha" placeholder="Confirmar Senha" required />
                     </div>
 
                     <div class="box-item" id="endereco">
@@ -105,3 +103,4 @@ require($_SERVER['DOCUMENT_ROOT'] . '/Projeto-pizzaria/_header.php');
         </section>
     </main>
 </body>
+<script src="assets/js/cadastro.js"></script>
