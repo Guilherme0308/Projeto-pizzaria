@@ -6,7 +6,7 @@ header('Content-Type: text/html; charset=utf-8');
 date_default_timezone_set('America/Sao_Paulo');
 
 // Define variáveis globais do site:
-$site_name = "Xero Pizzaria";
+$site_name = "Xero Pizzaria ";
 $site_slogan = "A melhor pizzaria!";
 $site_logo = "/src/img/logo_pizzaria.png";
 

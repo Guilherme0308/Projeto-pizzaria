@@ -9,7 +9,7 @@ $page_article .= <<<HTML
             para melhorar a experiência dos amantes de pizza.
             Somos líderes em número de lojas - em 2020, somamos 100 lojas espalhadas pelo país - e estamos
             investindo R$ 150 milhões para dobrar de tamanho e chegar a 200 unidades em 2025.
-            Xero Brasil preserva o padrão mundial de qualidade para o produto e o serviço.
+            Xêro Brasil preserva o padrão mundial de qualidade para o produto e o serviço.
             Nosso processo é artesanal, com massas frescas que passam por 48 horas de fermentação. Este é um dos
             nossos principais atributos: abrimos cada uma de nossas pizzas à mão.
             Nossos fornos também são os mais quentes do mercado para que as pizzas cheguem quentinhas à casa dos
@@ -54,13 +54,11 @@ $page_article .= <<<HTML
 </section>
 HTML;
 
-// Remova ou utilize a consulta SQL conforme necessário
-$sql = "SELECT nome, ingredientes, preco, imagem FROM sobre";
-$result = $conn->query($sql);
+// Inclui o cabeçalho do template nesta página:
+require($_SERVER['DOCUMENT_ROOT'] . '/Projeto-pizzaria/_header.php');
 
-// Se você quer exibir dados da tabela 'sobre', pode usar o loop abaixo
-if ($result && $result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $page_article .= "<p>{$row['nome']}</p>";
-    }
-}
+// Exibe o conteúdo da página:
+echo "<article>{$page_article}</article>";
+
+// Inclui o rodapé do template nesta página.
+require($_SERVER['DOCUMENT_ROOT'] . '/Projeto-pizzaria/_footer.php');

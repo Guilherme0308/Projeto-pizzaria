@@ -26,8 +26,14 @@ CREATE TABLE `produtos` (
   `nome` varchar(255) NOT NULL,
   `preco` decimal(10,2) NOT NULL,
   `categoria` varchar(255) NOT NULL,
-  `descricao` varchar(255) NOT NULL
+  `descricao` varchar(255) NOT NULL,
+  `imagem` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `produtos` (`id`, `nome`, `preco`, `categoria`, `descricao`, `imagem`) VALUES
+(1, 'Margherita', 35.00, 'pizza salgada', 'Molho de tomate, mussarela, manjericão fresco, azeite de oliva', '/src/img/pizza-5501065_640.jpg'),
+(2, 'Portuguesa', 64.00, 'pizza salgada', 'Molho de tomate, mussarela, presunto, ovos, azeitonas', '/src/img/pizza-5107039_640.jpg'),
+(3, 'Pepperoni', 46.00, 'pizza salgada', 'Molho de tomate, mussarela, pepperoni', '/src/img/pizza-5405848_640.jpg');
 
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
@@ -51,7 +57,7 @@ ALTER TABLE `cartao`
 
 ALTER TABLE `produtos`
   ADD PRIMARY KEY (`id`);
-
+  
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id`,`senha`);
 
