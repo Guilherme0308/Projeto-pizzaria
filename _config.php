@@ -18,7 +18,7 @@ $page_aside = '';
 $rgpass = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{7,25}$/";
 
 // Conexão com o banco de dados
-$db = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/_config.ini', true);
+$db = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/Projeto-pizzaria/_config.ini', true);
 
 foreach ($db as $server => $values) {
     if ($server == $_SERVER['SERVER_NAME']) {

@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['submit'])) {
-    require($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
+    require($_SERVER['DOCUMENT_ROOT'] . './_config.php');
 
     // Captura os valores dos campos do formulário
     $nome = $_POST['nome'];
@@ -42,6 +42,8 @@ if (isset($_POST['submit'])) {
     $stmt->close(); // Fecha a declaração
     $conexao->close(); // Fecha a conexão
 }
+
+require($_SERVER['DOCUMENT_ROOT'] . '/Projeto-pizzaria/_header.php');
 ?>
 
 <head>

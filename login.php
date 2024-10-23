@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])) {
     // Importa o arquivo de conexão
-    require($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
+    require($_SERVER['DOCUMENT_ROOT'] . './_config.php');
 
     $email = $_POST['email'];
     $senha = $_POST['senha'];
@@ -34,16 +34,12 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
 
     $stmt->close(); // Fecha a declaração
     $conexao->close(); // Fecha a conexão
-} 
+}
+
+require($_SERVER['DOCUMENT_ROOT'] . '/Projeto-pizzaria/_header.php'); 
 ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xero Pizzaria</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+
 <body>
     <main>
         <section class="logi">

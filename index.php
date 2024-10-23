@@ -1,7 +1,7 @@
 <?php
 
 // Inclui o arquivo de configuração global do aplicativo:
-require($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/Projeto-pizzaria/_config.php');
 
 // Define o título desta página:
 $page_title = $site_slogan;
@@ -50,10 +50,10 @@ $page_article .= '</section>';
  **************************************/
 
 // Inclui o cabeçalho do template nesta página:
-require($_SERVER['DOCUMENT_ROOT'] . '/_header.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/Projeto-pizzaria/_header.php');
 
 // Exibe o conteúdo da página:
 echo "<article>{$page_article}</article>";
 
 // Inclui o rodapé do template nesta página.
-require($_SERVER['DOCUMENT_ROOT'] . '/_footer.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/Projeto-pizzaria/_footer.php');
