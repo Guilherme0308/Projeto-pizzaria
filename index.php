@@ -18,8 +18,7 @@ HTML;
 // Inicia a seção de pizzas
 $page_article .= '<section class="pizzas-content">';
 
-// Buscar dados de pizza do banco de dados
-$sql = "SELECT nome, ingredientes, preco, imagem FROM pizzas";
+$sql = "SELECT nome, preco, categoria, descricao, imagem FROM produtos";
 $result = $conn->query($sql);
 
 // Verifique se os dados estão disponíveis
@@ -38,7 +37,7 @@ if ($result && $result->num_rows > 0) {
         HTML;
     }
 } else {
-    $page_article .= "<p>Não há pizzas disponíveis no momento.</p>";
+    $page_article .= "<p>Não há produtos disponíveis no momento.</p>";
 }
 
 // Finaliza a seção de pizzas

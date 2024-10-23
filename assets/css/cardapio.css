@@ -1,23 +1,16 @@
-<<<<<<< HEAD
+
 .cardapio-main{
     margin-top: 128px;
 }
-=======
->>>>>>> 44fe4a28315623e2269eab926ece69b146845a27
 
 .cardapio {
     padding: 20px;
     display: flex;
-    flex-wrap: wrap;
-<<<<<<< HEAD
+    flex-wrap: wrap !important;
     justify-content: space-between;
     gap: 8px; 
     margin: 32px auto;
-    max-width: 75% 
-=======
-    justify-content: center;
-    gap: 20px;
->>>>>>> 44fe4a28315623e2269eab926ece69b146845a27
+    max-width: 75%;
 }
 
 .section-title {

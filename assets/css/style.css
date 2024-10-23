@@ -201,7 +201,7 @@ header {
 }
 
 /* Banner da Home */
-/* .home-banner {
+.home-banner {
     position: relative;
     text-align: center;
     color: white;
@@ -243,45 +243,6 @@ header {
     transition: background-color 0.3s, transform 0.3s;
     z-index: 2;
     border: none;
-} */
- 
-.banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.banner-content {
-    text-align: center;
-}
-
-.banner h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.banner-buttons {
-    display: flex;
-    gap: 20px;
-}
-
-.btn-banner {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: transparent;
-    border: 1px solid #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-banner:hover {
-    background-color: #32CD32; /* Hover: Fundo verde */
-    color: #000; /* Hover: Texto preto */
 }
 
 
