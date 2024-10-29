@@ -59,6 +59,7 @@ INSERT INTO `produtos` (`id`, `nome`, `preco`, `categoria`, `descricao`, `imagem
 
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
+  `avatar` varchar(255) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `telefone` varchar(15) NOT NULL,
@@ -71,8 +72,6 @@ CREATE TABLE `usuario` (
   `senha` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO `usuario` (`id`, `nome`, `email`, `telefone`, `cep`, `endereco`, `numero`, `complemento`, `cidade`, `estado`, `senha`) VALUES
-(1, 'Hedwig Eva Maria Kiesler', 'xero@email.com', '40028922', '23087283', 'Estrada do Mendanha - Campo Grande', '555', 'Centro comercial', 'Rio de Janeiro', 'RJ', '$2y$10$nbpu5AFGRiriK621zEL38epGn2Q2OwgHw7EztMyfaNtUXZ.nlOl22');
 ALTER TABLE `cartao`
   ADD PRIMARY KEY (`id`);
 
