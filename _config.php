@@ -11,8 +11,7 @@ $site_slogan = "A melhor pizzaria!";
 $site_logo = "/src/img/logo_pizzaria.png";
 
 // Variáveis de conteúdo inicial:
-$page_article = '';
-$page_aside = '';
+$carrinh0 ='';
 
 // Regex de validação de senha:
 $rgpass = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{7,25}$/";

@@ -16,7 +16,6 @@
         <ul class="nav">
             <li><a href="index.php">Home</a></li>
             <li><a href="cardapio.php">Cardápio</a></li>
-            <li><a href="fazer_pedido.php">Fazer Pedido</a></li>
             <li><a href="sobre.php">Sobre</a></li>
             <li><a href="login.php" class="login">Login</a></li>
             <li><a href="profile.php" class="profile"><i class="fa fa-user"></i></a></li>

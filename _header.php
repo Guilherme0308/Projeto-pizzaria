@@ -33,7 +33,7 @@
                     <li><a href="./login.php" title="Logue-se..."><i class="fa-solid fa-user fa-fw"></i> Login</a></li>
                 <?php endif; ?>
                 <li class="cart">
-                    <a href="./carrinho.html" title="Carrinho"><i class="fa fa-shopping-cart cart-icon"></i>
+                    <a href="./carrinho.php" title="Carrinho"><i class="fa fa-shopping-cart cart-icon"></i>
                     <span class="cart-count"></span></a>
                 </li>
             </ul>

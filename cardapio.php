@@ -6,11 +6,11 @@ require($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
 $page_article .= '<section class="pizzas-content">';
 
 // Buscar dados de pizza do banco de dados
-$sql = "SELECT nome, ingredientes, preco, imagem FROM pizzas";
+$sql = "SELECT nome, ingredientes, preco, imagem FROM produtos";
 $result = $conn->query($sql);
+$carrinho 
 
-
-$sql = "SELECT nome, preco, categoria, descricao, imagem FROM produtos";
+$sql = "SELECT nome, preco, categoria, descricao, imagem, FROM produtos";
 $result = $conn->query($sql);
 
 // Verifique se os dados estão disponíveis
@@ -24,6 +24,7 @@ if ($result && $result->num_rows > 0) {
                     <h2>{$row['nome']}</h2>
                     <p>Preço: R$ {$row['preco']}</p>
                     <button class="order-button">Adicionar ao carrinho</button>
+                    <a href="?adicionar=<?php echo key ?>">Adicionar ao carrinho!</a>
                 </div>
             </div>
         HTML;
@@ -34,6 +35,21 @@ if ($result && $result->num_rows > 0) {
 
 // Finaliza a seção de pizzas
 $page_article .= '</section>';
+
+
+    if(isset($_GET['adicionar'])){
+        //vamos adicionar ao carrinho
+        $id_Produto = (int) $_GET['adicionar'];
+        if(isset($itens[$id_Produto])){
+            if(isset($_SESSION[$id_Produto])){
+                $_SESSION[$id_Produto]['quantidade']++;
+            }else{
+              $_SESSION[$id_Produto] = array('quantidade'=>1,'none'=> [$carrinho]);  
+            }
+        }else{
+            die('Você não pode adicionar um item inexistente.');
+        }
+    }
 
 
 
