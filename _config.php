@@ -35,4 +35,17 @@ $conn->query('SET character_set_results=utf8');
 
 // Configura o MySQL para usar os nomes em português para datas
 $conn->query('SET lc_time_names = pt_BR');
+if (isset($_COOKIE["{$site_name}_user"])) :
+
+    // Gera array com dados do usuário, convertendo JSON em array ($user[]):
+    $user = json_decode($_COOKIE["{$site_name}_user"], true);
+
+// Se o cookie não existe (ninguém está logado)...
+else :
+
+    // Dados do usuário não exitem:
+    $user = false;
+
+endif;
+
 ?>

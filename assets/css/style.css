@@ -95,6 +95,18 @@ header {
     font-weight: bold;
 }
 
+.profile-image {
+    width: 30px;
+    /* Set desired width */
+    height: auto;
+    border-radius: 50%;
+    /* Makes image circular */
+    object-fit: cover;
+    /* Keeps aspect ratio */
+    border: 2px solid #ccc;
+    /* Adds a border around the image */
+}
+
 /* Search Container */
 .search-container {
     display: flex;
@@ -299,4 +311,3 @@ header {
 .order-button:hover {
     background-color: #28a745;
 }
-     

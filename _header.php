@@ -21,19 +21,26 @@
             <ul class="nav">
                 <li><a href="./index.php" title="Início"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
                 <li><a href="./cardapio.php" title="Cardápio"><i class="fa-solid fa-utensils fa-fw"></i> Cardápio</a></li>
-                <li><a href="./sobre.html" title="Sobre"><i class="fa-solid fa-circle-info fa-fw"></i> Sobre</a></li>
-                <?php if ($user) : ?>
-                    <li>
-                        <a href="/profile" title="Ver perfil de <?php echo $user['name']; ?>" class="menu-user">
-                            <img src="<?php echo $user['avatar']; ?>" alt="<?php echo $user['name']; ?>" class="profile-avatar">
-                            <span>Perfil</span>
-                        </a>
-                    </li>
-                <?php else : ?>
-                    <li><a href="./login.php" title="Logue-se..."><i class="fa-solid fa-user fa-fw"></i> Login</a></li>
-                <?php endif; ?>
+                <li><a href="./sobre.php" title="Sobre"><i class="fa-solid fa-circle-info fa-fw"></i> Sobre</a></li>
+                <?php if (isset($user)): ?>
+                    <div class="header-user-info">
+                    <?php 
+// Define a default profile image URL
+$default_photo_url = 'src/img/user.png'; 
+
+// Check if user has a photo; if not, use the default image
+$photo_url = !empty($user['photo']) ? htmlspecialchars($user['photo']) : $default_photo_url;
+?>
+
+    
+<img src="<?php echo $photo_url; ?>" alt="User Photo" class="profile-image">
+                    
+</div>
+
+<?php endif; ?>
+
                 <li class="cart">
-                    <a href="./carrinho.html" title="Carrinho"><i class="fa fa-shopping-cart cart-icon"></i>
+                    <a href="./carrinho.php" title="Carrinho"><i class="fa fa-shopping-cart cart-icon"></i>
                     <span class="cart-count"></span></a>
                 </li>
             </ul>

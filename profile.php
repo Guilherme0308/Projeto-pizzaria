@@ -22,7 +22,7 @@ $page_article = '<section class="profile-content">';
 
 // Verifique se os dados do usuário estão disponíveis
 if ($resultado && $resultado->num_rows > 0) {
-    $user = $resultado->fetch_assoc();
+    $user = $resultado->fetch_assoc();  
     // Cria o cartão de perfil
     $page_article .= <<<HTML
         <div class="profile-card">
