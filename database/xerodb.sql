@@ -43,7 +43,7 @@ INSERT INTO `produtos` (`id`, `nome`, `preco`, `categoria`, `descricao`, `imagem
 (11, 'Chocolate Branco', 35.00, 'pizza doce', 'Massa fina com muçarela sem sal, chocolate branco ao leite temperado com uma pitada de sal.', '/src/img/pizzadocechocolatebranco.png'),
 (12, 'Chocolate misto', 35.00, 'pizza doce', 'Massa fina com muçarela sem sal, chocolate branco e preto temperados e em formato lindo.', '/src/img/pizzadocechocolatemisto.png'),
 (13, 'Coca Cola lata', 7.50, 'bebidas', 'Coca Cola Zero ou comum em lata de 350ml.', '/src/img/bebidascomunscocacola.png'),
-(14, 'pepsi cola latinha', 7.50, 'bebidas', 'Pepsi Black, comum ou twist em lata de 350ml.', '/src/img/bebidascomunscocacola.png'),
+(14, 'pepsi cola latinha', 7.50, 'bebidas', 'Pepsi Black, comum ou twist em lata de 350ml.', '/src/img/bebidascomunspepsicola.png'),
 (15, 'Fanta Latinha', 7.50, 'bebidas', 'Fanta Laranja, Uva ou Maracujá em lata de 350ml.', '/src/img/bebidasmomunsfanta.png'),
 (16, 'Guaraná Antartica', 7.50, 'bebidas', 'Guaraná Antártica Zero ou comum em lata de 350ml.', '/src/img/bebidascomunsguaranaantartica.png'),
 (17, 'Agua tônica', 7.50, 'bebidas', 'Água Tônica em lata de 350ml.', '/src/img/bebidascomunsaguatonica.png'),
